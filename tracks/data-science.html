@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Data Science</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/data-sci.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/data-sci.png" height="160em" style="bottom: 30px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <p style="font-size:20px;">
+          Uncover the field of data science by diving into Machine Learning and Web<br>
+          Scraping, App Development workshops led by our mentors with diverse experience<br>
+          in applying mathematical knowledge into code.
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../data-science/covid-viz.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/covid economic data visualization.png"/>
+                </a>
+                <span class="small-description"><b>1. COVID-19 Economic Data Visualization (33m)</b><br>
+                  Learn how to tackle large datasets through the the data cycle: collecting, visualize, and analyze datasets that compare economic progress in various countries during the COVID-19 pandemic.
+                </span>
+              </li>
+              <li>
+                <a href="../data-science/economics-and-ml.html">
+                  <img class="thumb-icon" src="../img/thumbnail/ecoml.png"/>
+                </a>
+                <span class="small-description"><b>2. Economics & Machine Learning (50m)</b><br>
+                  Are you up for the challenge to utilize your data programming skills and machine learning to predict the country of Algeria's economy up to the year of 2049?
+                </span>
+              </li>
+              <li>
+                <a href="../data-science/police-data-web-app.html">
+                  <img class="thumb-icon" src="../img/thumbnail/police data web app.png"/>
+                </a>
+                <span class="small-description"><b>3. Police Data Web App (41m)</b><br>
+                  Learn how to create an interactive Python data exploration web app using Streamlit, an open-source framework for Machine Learning and Data Science!
+                </span>
+              </li>
+              <li>
+                <a href="../data-science/web-scraping.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/webscrap.png"/>
+                </a>
+                <span class="small-description"><b>4. Web Scraping (21m)</b><br>
+                  Learn about scraping web information through this introduction using BeautifulSoup!
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Data Science</b></p>
+                  <p style="font-size:20px;">
+                    Apply your Python skills to build web applications, machine learning 
+                    projects, and data visualization dashboard. Data Science extends our 
+                    knowledge of given data to greater lenses in data analysis using Pandas
+                    and Flask to build transformative visualization and data analytics.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    145m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Data Science<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Emily Chang<br>
+                    Jennifer Chang<br>
+                    Shivank Mishra
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

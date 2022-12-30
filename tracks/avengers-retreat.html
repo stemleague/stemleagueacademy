@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Avengers Retreat</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/avengers.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo" id="pl">
+        <img class="title-logo" src="../img/icon/retreat.png" height="60em"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" id="desc" style="margin-bottom:6em;">
+        <p style="font-size:20px;">
+            You are invited to the Avengers Retreat Coding Tournament! In order to become initiated as an Avenger,
+            you need to showcase your coding skills through a series of coding challenges. 
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColors(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Challenges</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick="changeColors(4)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Map View</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColors(2)" id="all" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="all-info" style="display: none; padding-bottom: 20em; margin-bottom:2em;">
+            
+            <table width="100%">
+                <tr>
+                  <td width="65%" style="padding-left: 1em; padding-right: 1em;">
+                    <div style="margin-bottom:0em; margin-top:7em;">
+                    <h2 onclick = "changeColors(1)" style="text-align: right;">Close</h2>
+                      <img id ="map" style="padding-top:1em;" src="../img/map/map.png" width="100%"/>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td width="20%">
+                        <div onmouseover="changeMap('antman', '#dde968')" style="text-align: left; color: white; padding: 1em;">
+                            <div id="antman" onClick="window.location.href='../avengers-retreat/quantum-bug.html';">
+                            <h3><img src="../img/icon/dpc.png" style="margin-right:0.5em" width="10%"/>QUANTUM-BUG</h3>
+                            <h7>There's a bug in the code running the quantum machine taking Scott back to the time before Thanos.</h7>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div onmouseover="changeMap('blackWidow', '#e05d5d')" style="text-align: left; color: white; padding: 1em">
+                            <div id="blackWidow" onClick="window.location.href = '../avengers-retreat/black-widow.html';">
+                            <h3><img src="../img/icon/dpc.png" style="margin-right:0.5em" width="10%"/>BLACK WIDOW</h3>
+                            <h7>The TaskMaster has stirred up some trouble for Natasha as she tries to face her past and her future.</h7>
+                            </div>
+                        </div>
+                    </td>
+                    <td width="20%">
+                      <div onmouseover="changeMap('spiderman', '#5691e6')" style="text-align: left; color: white; padding: 1em">
+                        <div id="spiderman" onClick="window.location.href='../avengers-retreat/too-close-to-home.html';">
+                          <h3><img src="../img/icon/wdc.png" style="margin-right:0.5em" width="10%"/>TOO CLOSE TO HOME</h3>
+                          <h7>Peter Parker has gotten himself in a sticky situation and he needs your help.</h7>
+                        </div>
+                      </div>
+                    </td>
+                    <td width="20%">
+                        <div onmouseover="changeMap('wanda', '#e054ca')" style="text-align: left; color: white; padding: 1em">
+                            <a href="avengers-retreat/staycation.html" style="color: white">
+                            <div id="wanda" onClick="window.location.href='../avengers-retreat/staycation.html';">
+                                <h3><img src="../img/icon/wdc.png" style="margin-right:0.5em" width="10%"/>STAYCATION</h3>
+                                <h7>Follow the Scarlet Witch’s footsteps to create your own quarantine staycation site.</h7>
+                            </div>
+                            </a>
+                        </div>
+                    </td>
+                    <td width="20%">
+                        <div onmouseover="changeMap('groot', '#00b657')" style="text-align: left; color: white; padding: 1em">
+                            <div id="groot" onClick="window.location.href='../avengers-retreat/breakout.html';">
+                                <h3><img src="../img/icon/b.png" style="margin-right:0.5em" width="10%"/>BREAKOUT</h3>
+                                <h7>Join Groot and Rocket tinkering with the security system in an interstellar prison.</h7>
+                            </div>
+                        </div>
+                    </td>
+                  </td>
+                </tr>
+              </table>
+        </div>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../avengers-retreat/black-widow.html">
+                  <img class="thumb-icon" src="../img/thumbnail/blackwidow.png"/>
+                </a>
+                <span class="small-description"><b>1. Black Widow</b><br>
+                    The TaskMaster has stirred up some trouble for Natasha as she tries to face her past and her future.
+                </span>
+              </li>
+              <li>
+                <a href="../avengers-retreat/staycation.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/staycation.png"/>
+                </a>
+                <span class="small-description"><b>2. Staycation</b><br>
+                    Follow the Scarlet Witch’s footsteps to create your own quarantine staycation site.
+                </span>
+              </li>
+              <li>
+                <a href="../avengers-retreat/too-close-to-home.html">
+                  <img class="thumb-icon" src="../img/thumbnail/tooclosetohome.png"/>
+                </a>
+                <span class="small-description"><b>3. Too Close To Home</b><br>
+                Peter Parker has gotten himself in a sticky situation and he needs your help.
+                </span>
+              </li>
+              <li>
+                <a href="../avengers-retreat/quantum-bug.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/quantumbug.png"/>
+                </a>
+                <span class="small-description"><b>4. Quantum Bug</b><br>
+                    There's a bug in the code running the quantum machine taking Scott back to the time before Thanos.
+                </span>
+              </li>
+              <li>
+                <a href="../avengers-retreat/breakout.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/breakout.png"/>
+                </a>
+                <span class="small-description"><b>5. Breakout</b><br>
+                Join Groot and Rocket tinkering with the security system in an interstellar prison.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Avengers Retreat</b></p>
+                  <p style="font-size:20px;">
+                    Created in July 2021 as a celebration of the Black 
+                    Widow Movie released and hosted for Week 2 of 2021 
+                    Developer Program.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Release Date:</b>
+                    <br>
+                    2021<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Coding Tournaments<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Elizabeth Lin<br>
+                    Sophia Lin<br>
+                    Sally Zhou<br>
+                    Sai Praneth Raju
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function changeMap(n, color) {
+    var attractions = ['groot', 'wanda', 'blackWidow', 'spiderman', 'antman'];
+    for (var i = 0; i < attractions.length; i++) {
+        document.getElementById(attractions[i]).style.color = 'white';
+    }
+    document.getElementById("map").src = "../img/map/" + n + "Map.png";
+    document.getElementById(n).style.color = color;
+}
+    </script>
+<script src="../script.js"></script>
+</body>
+</html>

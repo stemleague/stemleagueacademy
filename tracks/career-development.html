@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Career Development</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/career-dev.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/career.png" height="120em" style="bottom: 0px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <p style="font-size:20px;">
+          We will guide you through how to prepare for your future career in STEM,<br>
+          which includes professional development workshops and tech talks from<br>
+          industry folks to build your techincal and interpersonal skills.
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../career-development/make-your-own-portfolio.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/make your own portfolio.png"/>
+                </a>
+                <span class="small-description"><b>1. Make Your Own Portfolio (19m)</b><br>
+                  Wanna share your projects (music, pictures, gamer achievements) on an app and website interface? Join this workshop to learn how to showcase your work!
+                </span>
+              </li>
+              <li>
+                <a href="../career-development/intern-panel.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/intern panel.png"/>
+                </a>
+                <span class="small-description"><b>2. Intern Panel (20m)</b><br>
+                  Two awesome interns from Microsoft are sharing their advice on how to navigate the STEM field & tips to become a great Developer! :)
+                </span>
+              </li>
+
+              <li>
+                <a href="../career-development/magenta-talk.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/magenta career talk.png"/>
+                </a>
+                <span class="small-description"><b>3. T-Mobile Magenta Career Talk</b><br>
+                  Learn how to get internships and STEM opportunities at T-Mobile and dive into the amazing culture that surrounds an expansive 5G technology empire.
+                </span>
+              </li>
+
+              <li>
+                <a href="../career-development/host-github-pages.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/host git.png"/>
+                </a>
+                <span class="small-description"><b>4. Hosting Projects on Github (13m)</b><br>
+                  Learn how to use Git and Command Line to push your own projects (coding sessions, workshops, personal hackathon project) to your own GitHub!
+                </span>
+              </li>
+              <li>
+                <a href="../career-development/web-apis.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/web apis.png"/>
+                </a>
+                <span class="small-description"><b>5. Web APIs</b><br>
+                  Dive into using Web APIs for your applications, how computers and machines connect with each other 
+                  to transfer data across the web.
+                </span>
+              </li>
+
+              <li>
+                <a href="../career-development/career-ready.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/career ready.png"/>
+                </a>
+                <span class="small-description"><b>6. Career Ready (25m)</b><br>
+                  It is time to get your game on & prep yourself for a career in tech! We will be sharing with you our insights on personal branding, resume building, and finding STEM opportunities!
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Career Development</b></p>
+                  <p style="font-size:20px;">
+                    Launching a career whether that in high school or college
+                    focusing in STEM can be challenging. We provide students insights 
+                    on how to excel in their technical skills through mentorship,
+                    coding skills, and leadership in the STEM World.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    89m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Career Development<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Jessica Truong<br>
+                    Elizabeth Lin<br>
+                    Christin Lin<br>
+                    Kristie Lim
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

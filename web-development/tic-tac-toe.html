@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/thumbnail/tic-tac-toe.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:8em;">
+        <br><br>
+        Try out a challenging tutorial to create your first Tic Tac Toe game with HTML/CSS and Javascript!
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-20em;">
+        <h2 class="lessons-title">Lessons</h2>
+          <div id="scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="#">
+                    <img class="thumb-icon" src="../img/thumbnail/ttt1.png" title="ep1" onclick="getClicked(this)"/>
+                </a>
+                <span class="small-description"><b>Tic Tac Toe (Part 1)</b><br>
+                </span>
+              </li>
+              <li>
+                <a href="#">
+                    <img class = "thumb-icon" src="../img/thumbnail/ttt2.png" title="ep1" onclick="getClicked(this)"/>
+                </a>
+                <span class="small-description"><b>Tic Tac Toe (Part 2)</b><br>
+                </span>
+              </li>
+            </ul>
+          </div>
+      </div>
+
+    </div>
+
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Program: Web Development</title>
+	<link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+<style>
+    .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container, .all {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+.pad-table {
+  padding-top: 0.1em;
+  padding-left: 0.65em;
+  padding-right: 0.65em;
+  padding-bottom:4em;
+  width: 20%;
+  height: 0em;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+img.logo {
+  height: 90px;
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+#dialog {
+  background-color: white;
+  position: fixed;
+  text-align: center;
+}
+h2 {
+  -webkit-transition: color 0.5s; /* For Safari 3.0 to 6.0 */
+  transition: color 0.5s; /* For modern browsers */
+}
+h2:hover {
+  color: #ffccf7;
+}
+
+</style>
+
+<body>
+  <div class="se-pre-con"></div>
+  <!-- navigation bar -->
+  <div id="names">
+    <div class="header" style="background-color: black;">
+      <a href="index.html"><img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="home.html">HOME</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icon/search.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "search.html">SEARCH</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src='img/icon/developer.png' width="26em"/>
+          &nbsp;&nbsp;&nbsp;
+          <div class="dropdown">
+            <a style="color:white" href="web-development.html">WEB DEVELOPMENT</a>
+            <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+              <!-- <br>
+              <p onclick=window.location.href='data-programming.html' class="dpc underline">DATA PROGRAMMING</p>
+              <br><br> 
+              <p onclick=window.location.href='web-development.html' class="wdc underline">WEB DEVELOPMENT</p>
+              -->
+            </div>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/globe.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a>COMMUNITY</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='community.html' class="underline">Fall 2021</p>
+            <br><br>
+            <p onclick=window.location.href='summer21.html' class="underline">Summer 2021</p>
+            <br><br>
+            <p onclick=window.location.href='https://stemleague.github.io/login/final-showcase.html' class="underline">Summer 2020</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <img src='img/icon/vault.png' width="20em"/>
+          &nbsp;&nbsp;&nbsp;
+          <a class="underline" href="https://sites.google.com/view/stem-league-library/front-desk">LIBRARY</a>
+        <button class="login" onclick=window.open("https://www.gofundme.com/f/2022-stem-league-developer-program-fund")>SUPPORT US</button>
+      </h4>
+    </div>
+  
+
+    
+    <div id="upcoming" style="padding-top:5em; display: block;">
+    </div>
+
+    <h1 style="font-size: 40px; text-align: left; color: #ffccf7;">
+      D&nbsp;E&nbsp;V&nbsp;E&nbsp;L&nbsp;O&nbsp;P&nbsp;E&nbsp;R&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;E&nbsp;B&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;V&nbsp;E&nbsp;L&nbsp;O&nbsp;P&nbsp;M&nbsp;E&nbsp;N&nbsp;T</h1>
+    <hr>
+    <table width="100%">
+      <tr>
+        <td width="25%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;1</p>
+            <li style="padding-top: 0em;">
+                <p class="pinkday"><b>MONDAY, JULY 11</b></p>
+                <a href="web-development/intro-to-web-dev.html">
+                  <h2 class="pinkcap">Intro to Web Development</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>TUESDAY, JULY 12</b></p>
+                <a href="web-development/about-me.html">
+                  <h2 class="pinkcap">About Me</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>WEDNESDAY, JULY 13</b></p>
+              <a href="web-development/dive-into-html.html">
+                <h2 class="pinkcap">Dive Into HTML</h2>
+              </a>
+              <a href="brown-bag/cs-journey.html">
+                <h2 class="pinkcap">Journey in Computer Science</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>THURSDAY, JULY 14</b></p>
+              <a href="web-development/donut-cat.html">
+                <h2 class="pinkcap">Donut Cat</h2>
+              </a>
+              <a href="gaming/pop-up-penguins.html">
+                <h2 class="pinkcap">Pop-Up Penguins</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>FRIDAY, JULY 15</b></p>
+                <a href="ux-design/accessibility.html">
+                  <h2 class="pinkcap">Intro to UX Design</h2>
+                </a>
+                <!-- <a href="brown-bag/swe.html">
+                  <h2 class="pinkcap">Day In The Life of an Engineer</h2>
+                </a> -->
+            </li>
+          </ul>
+        </td>
+       <td width="25%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;2</p>
+            <li style="padding-top: 0em;">
+                <p class="pinkday"><b>MONDAY, JULY 18</b></p>
+                <a href="web-development/css-layout.html">
+                  <h2 class="pinkcap">CSS Layout</h2>
+                </a>
+                <!-- <a href="brown-bag/imagineering.html"> -->
+                  <h2 class="pinkcap">Museum of Flight Virtual Shuttle Tour</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>TUESDAY, JULY 19</b></p>
+                <a href="web-development/card-collection.html">
+                  <h2 class="pinkcap">Card Collection</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>WEDNESDAY, JULY 20</b></p>
+              <a href="web-development/buttons-and-animations.html">
+                <h2 class="pinkcap">Buttons and Animations</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>THURSDAY, JULY 21</b></p>
+              <a href="web-development/animation-magic.html">
+                <h2 class="pinkcap">Animation Magic</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>FRIDAY, JULY 22</b></p>
+                <a href="career-development/make-your-own-portfolio.html">
+                  <h2 class="pinkcap">Make Your Own Portfolio</h2>
+                </a>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="25%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;3</p>
+            <li style="padding-top: 0em;">
+                <p class="pinkday"><b>MONDAY, JULY 19</b></p>
+                <a href="web-development/intro-to-js.html">
+                  <h2 class="pinkcap">Intro to Javascript</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>TUESDAY, JULY 20</b></p>
+                <a href="web-development/baymax.html">
+                  <h2 class="pinkcap">Baymax Personal Assistant</h2>
+                </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>WEDNESDAY, JULY 21</b></p>
+              <a href="brown-bag/computing-accessibility.html">
+                <h2 class="pinkcap">Computing & Accessibility Talk</h2>
+              </a>
+              <a href="web-development/js-functions.html">
+                <h2 class="pinkcap">Javascript Functions</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+              <p class="pinkday"><b>THURSDAY, JULY 22</b></p>
+              <a href="web-development/minion-machine.html">
+                <h2 class="pinkcap">Minion Machine</h2>
+              </a>
+            </li>
+            <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>FRIDAY, JULY 23</b></p>
+                <a href="career-development/magenta-talk.html">
+                  <h2 class="pinkcap">T-Mobile Magenta Career Panel</h2>
+                </a>
+                <a href="ux-design/figma.html">
+                  <h2 class="pinkcap">Using Figma for Design</h2>
+                </a>
+              </a>
+            </li>
+          </ul>
+        </td>
+
+
+        <td width="25%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;4</p>
+              <li style="padding-top: 0em;">
+                  <p class="pinkday"><b>MONDAY, JULY 26</b></p>
+                  <a href="https://docs.google.com/presentation/d/1gDOHXDL1w7-dtm1EHvxcBzflKhDgcDjWZ3Prpa6-7K0/present?slide=id.p">
+                    <h2 class="pinkcap">Developer Hacks</h2>
+                  </a>
+                  <a href="https://forms.gle/LzHyiPSrbHzPe6r6A">
+                    <h2 class="pinkcap">Creating Your Hacker Profile</h2>
+                  </a>
+              </li>
+              <li style="padding-top: 0.5em;">
+                  <p class="pinkday"><b>TUESDAY, JULY 27</b></p>
+                  <a href="brown-bag/dna.html">
+                    <h2 class="pinkcap">DNA Data Storage</h2>
+                  </a>
+                  <a href="career-development/web-apis.html">  
+                    <h2 class="pinkcap">Web APIs</h2>
+                  </a>
+              </li>
+              <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>WEDNESDAY, JULY 28</b></p>
+                <a href="tech-world-and-beyond/mentorship-and-beyond.html">
+                  <h2 class="pinkcap">Mentorship & Beyond</h2>
+                </a>
+              </li>
+              <li style="padding-top: 0.5em;">
+                <p class="pinkday"><b>THURSDAY, JULY 29</b></p>
+                <a href="tech-world-and-beyond/tmobile-tech-experience.html">
+                  <h2 class="pinkcap">T-Mobile Tech Experience</h2>
+                </a>
+                <a href="career-development/host-github-pages.html">
+                  <h2 class="pinkcap">Hosting Your Projects on Github</h2>
+                </a>
+              </li>
+              <li style="padding-top: 0.5em;">
+                  <p class="pinkday"><b>FRIDAY, JULY 30</b></p>
+                  <a href="brown-bag/roblox.html">
+                    <h2 class="pinkcap">Chat with Roblox PM</h2>
+                  </a>
+                  <a href="essentials/2021-grad.html">
+                    <h2 class="pinkcap">Final Showcase & Graduation</h2>
+                  </a>
+                </a>
+              </li>
+            </ul>
+          </td>
+      </tr>
+    </table>
+    
+    <h1 style="font-size: 40px; text-align: left; color: #ffccf7;">N&nbsp;E&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;T&nbsp;E&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;E&nbsp;A&nbsp;G&nbsp;U&nbsp;E&nbsp;+</h1>
+    <hr>
+    <table width="100%">
+      <tr>
+        <td width="33.3%">
+          <ul id="pinklist" style="padding-top: 1em;">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;1</p>
+            <li style="padding-top: 0em;">
+                <a href="tech-world-and-beyond/venture-into-tech-industry.html">
+                  <h2 class="pinkcap">Venture Into the Tech Industry</h2>
+                </a>
+                <a href="gaming/pop-up-penguins.html">
+                  <h2 class="pinkcap" style="line-height: 1em;">Pop Up Penguins</h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.3%">
+          <ul id="pinklist" style="padding-top: 1em;">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;2</p>
+              <li style="padding-top: 0em;">
+                <a href="tech-world-and-beyond/iot.html">
+                  <h2 class="pinkcap">Demystifying the Internet of Things</h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.3%">
+          <ul id="pinklist" style="padding-top: 1em;">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;&nbsp;3</p>
+              <li style="padding-top: 0em;">
+                <a href="tech-world-and-beyond/into-life-of-pm.html">
+                  <h2 class="pinkcap">Into the Life of a Program Manager</h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+    <h5 style="color: white">
+      <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a style="color: white" href="join.html">Join Us</a>
+      <br><br>
+      &copy; STEM League. All Rights Reserved.
+    </h5>
+  </footer>
+  
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>STEM League+</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="page.css">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+
+
+.index-header {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  left: 0;
+  padding: 0;
+  /* height:9em; */
+  z-index: 10000;
+  transition: all 0.2s ease-in-out;
+  height: auto;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.dimScreen {
+  /* position:absolute; */
+  padding:0;
+  margin:0;
+  width: 100%;
+  height: 100%;
+}
+
+.atTop {
+  top:0;
+  left:0;
+}
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+
+}
+
+
+.squares {
+  position: relative;
+  display: inline-block;
+  border: 4px solid transparent;
+  width: 90%;
+  height: auto;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.squares:hover {
+  border: 4px solid white;
+  transform: scale(1.05);
+}
+
+
+.box {
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+    }
+    .bounce-2 {
+        animation-name: bounce-2;
+        animation-timing-function: ease;
+    }
+
+    @keyframes bounce-2 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-1em); }
+        100% { transform: translateY(0); }
+    }
+
+
+#reviews {
+  border: white 2px solid;
+  padding:1em;
+  margin: 2em;
+
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+
+  <div id="names">
+    <div class="index-header">
+      <a href="http://stemleague.cs.washington.edu/">
+      <img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <button class="login" onclick=window.open("https://gofundme.com/2021-stem-league-developer-program-fund")>SUPPORT US</button>
+        <button class="login" style="background-color: #a1a4ff; background-image: none;border: 3px solid #a1a4ff;" onclick=window.location.href='index.html'>BACK TO HOME</button>
+      </h4>
+    </div>
+
+
+
+
+    <div class="dimScreen" id="home" style="background-image:linear-gradient(to bottom, #09172c, #274e81);  background-color:transparent;
+    background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 10em;">
+    <!-- <center> -->
+      <img src="img/icon/explorer.png" width="50em" style="margin-top: 10em; margin-bottom:0em;"/>
+      <br>
+      <h1 style="color: white; font-size: 3em; line-height: 0em;">STEM League Explorer Program</h1>
+      <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em;">
+        STEM League Explorer Program is a 5 week school-year opportunity for aspiring 6th - 12th grade students to learn coding through
+        live instruction from <a href="http://stemleague.cs.washington.edu/" style="text-decoration: underline;">STEM League</a> Instructors.
+        As an Explorer, students will work together to learn coding
+        and create large scale projects while building their technical skills in a tight-knit student community.
+      </h2>
+
+
+
+
+
+      <button onclick=window.location.href='https://forms.gle/kvYgiwQwL9mUMNAi6' style="background-color: white; color: black;" class="trailer">
+        Get Notified for 2023 Explorer Program
+      </button>
+
+      <!-- <h4 style="font-size: 20px; line-height: 1.5em; color: white;">
+        <u>Application Deadlines</u><br>
+        Winter Cohort: 1/21/22<br>
+        Spring Cohort: 3/4/22<br>
+      </h4> -->
+
+
+      <br><br><br><br>
+      <h1 style="color: white; font-size: 2.5em; line-height: 0em;">Explorer Program Dates:</h1>
+      <h2 style="color: white;">
+        Winter Cohort: January 31 - March 4, 2022 (Application Deadline: January 25)<br>
+        Spring Cohort: March 14 - April 15, 2022 (Application Deadline: March 9)
+      </h2>
+
+      <br><br><br><br>
+      <h1 style="color: white; font-size: 2.5em; line-height: 0em;">Student Reviews</h1>
+      <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em; font-size: 1em;">
+        <div id="reviews">
+          <i>
+            10/10 Instructors are super helpful & nice! The pacing is perfect and the Session Recordings and Lesson Slides are good if you fall behind a little (plus there were easy fast ways to ask for help from the instructors or from students in the group)
+            <br>- Computer Programming Track Student
+          </i>
+        </div>
+
+        <div id="reviews">
+          <i>
+            The Explorer Program allows you to learn the fundamentals of Computer Programming and start your own coding projects. I definitely recommend it!
+            <br>- Computer Programming Track Student
+          </i>
+        </div>
+
+        <div id="reviews">
+          <i>
+            I learned a lot from the Explorer Program! I would recommend the Explorer Program to people who do not have as much free time. The Explorer Program helped me learn a lot in just a small amount of time.
+            <br>- Web Development Student
+          </i>
+        </div>
+      </h2>
+      <div style="margin-left:5em; margin-right:5em; margin-bottom: 3em;">
+        <table>
+          <tr>
+            <td width="50%">
+              <h2 style="color: white; font-size: 2em; text-align:left;">What does a typical week look like?</h2>
+              <ul style="color:white; font-size: 1.2em; text-align: left;">
+                <li>One 60 minute lesson via Zoom</li>
+                <li>Office Hours via Discord throughout the week</li>
+                <li>One Coding Practice Assignment</li>
+                <li>All lessons and office hours times will be announced once students are admitted.</li>
+              </ul>
+              <br>
+              <h2 style="color: white; font-size: 2em; text-align:left;">Applicant Qualifications:</h2>
+              <ul style="color:white; font-size: 1.2em; text-align: left;">
+                <li>Enthusiastic learner with a curiousity to learn coding (no experience required)</li>
+                <li>Must be a rising 6th-12th grade student</li>
+              </ul>
+            </td>
+            <td width="50%">
+              <h2 style="color: white; font-size: 2em; text-align:left;">At the end of the Program, students will:</h2>
+              <ul style="color:white; font-size: 1.2em; text-align: left;">
+                <li>Build strong technical coding skills</li>
+                <li>Develop a technical portfolio of coding projects for future intern/job opportunities</li>
+                <li>Stay connected with STEM League Community for future opportunities</li>
+              </ul>
+
+              <h2 style="color: white; font-size: 2em; text-align:left;">Program Instructors</h2>
+              <ul style="color:white; font-size: 1.2em; text-align: left;">
+                <li>
+                  <a href="https://www.linkedin.com/in/elin6/"><u>Elizabeth Lin</u></a> (Co-Founder of STEM League and Software Engineer at Microsoft, prior UW CSE Teaching Assistant, Google & T-Mobile Intern)
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/slin7/"><u>Sophia Lin</u></a> (Co-Founder of STEM League and Software Engineer Intern at NASA and Fred Hutchinson Cancer Research Center)
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <center>
+        <h2 style="color: white; font-size: 1.5em; text-align:center;">SEE TRACKS</h2>
+        <br><br><br>
+        <a href="#computer-programming" >
+          <img src="img/icon/down.png" class="box bounce-2" width="50em" style=""/>
+        </a>
+    </center>
+  </div>
+
+    <div class="dimScreen" id="computer-programming" style="background: linear-gradient(210deg, transparent 8%, rgb(44, 44, 44)),url('img/bg/cp.png');
+      background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 10em;">
+      <center>
+        <img src="img/icon/explorer.png" width="50em" style="margin-top: 10em; margin-bottom:0em;"/>
+        <br>
+        <h1 style="color: white; font-size: 3em; line-height: 0em;">Computer Programming I</h1>
+        <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em;">
+          This class dives into the fundamentals of coding with Java where students will learn how to write scalable and efficent programs.
+        </h2>
+        <div style="border: solid white 5px; margin-left:10em; margin-right:10em; margin-bottom: 3em;">
+          <table>
+            <tr>
+              <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+
+                  <!-- <u>Participation Fee:</u> $150<br><br> -->
+                  <u>Topics Covered:</u> Basic Java Data Types, Method Decomposition, Conditionals, Parameters, Code Style,
+                  Writing scalable Java Programs for algorithms
+
+                </h2>
+              </td>
+              <!-- <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                  <u>Cohort Offered</u><br>
+                Fall Cohort 2 (Apply by September 10)<br>
+                Dates: September 22 - October 20, 2021<br><br>
+                [NEW] Winter Cohort 1 (Apply by October 15)<br>
+                Dates: November 1 - December 3, 2021
+                </h2>
+              </td> -->
+            </tr>
+          </table>
+        </div>
+
+        <button onclick=window.location.href='https://forms.gle/kvYgiwQwL9mUMNAi6' style="background-color: #71bed3" class="trailer">Apply Now</button>
+      </center>
+    </div>
+
+
+    <!-- <div class="dimScreen" id="computer-programming2" style="background: linear-gradient(210deg, transparent 8%, rgb(44, 44, 44)),url('img/bg/cp.png');
+    background-size: cover; background-position: center; background-repeat: no-repeat; padding-bottom: 10em;">
+    <center>
+      <img src="img/icon/explorer.png" width="50em" style="margin-top: 10em; margin-bottom:0em;"/>
+      <br>
+      <h1 style="color: white; font-size: 3em; line-height: 0em;">Computer Programming II</h1>
+      <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em;">
+        This class dives into more advanced Java fundamentals where students who have finished Computer Programming I will build
+        valuable skills as programmers including team collaboration.
+      </h2>
+      <div style="border: solid white 5px; margin-left:10em; margin-right:10em; margin-bottom: 3em;">
+        <table>
+          <tr>
+            <td width="50%">
+              <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+
+                <u>Participation Fee:</u> $150<br><br>
+                <u>Topics Covered:</u> Iteration with Loops, Arrays, Performing Code Reviews, ArrayList & Classes
+
+              </h2>
+            </td>
+
+            <td width="50%">
+              <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                <u>Cohort Offered</u><br>
+                Fall Cohort 2 (Apply by September 10)<br>
+                Dates: September 22 - October 20, 2021<br><br>
+                [NEW] Winter Cohort 1 (Apply by October 15)<br>
+                Dates: November 1 - December 3, 2021
+              </h2>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <button onclick=window.location.href='https://forms.gle/kvYgiwQwL9mUMNAi6' style="background-color: #71bed3" class="trailer">Apply Now</button>
+    </center>
+  </div>
+  -->
+
+
+
+
+    <div class="dimScreen" id="web-development" style="background: linear-gradient(210deg, transparent 8%, rgb(44, 44, 44)),url('img/bg/wd.png');
+      background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+      <center>
+        <img src="img/icon/explorer.png" width="50em" style="margin-top: 10em; margin-bottom:0em;"/>
+        <br>
+        <h1 style="color: white; font-size: 3em; line-height: 0em;">Web Development</h1>
+        <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em;">
+          In this class, students will embark on learning how the web works and how to build their own portfolio website in HTML/CSS and Javascript.
+        </h2>
+
+        <div style="border: solid white 5px; margin-left:10em; margin-right:10em; margin-bottom: 3em;">
+          <table>
+            <tr>
+              <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                  <!-- <u>Participation Fee:</u> $150<br><br> -->
+                  <u>Topics Covered: </u>HTML Basics, CSS Layout, Accessibility, UX Design, Javascript Basics
+                </h2>
+              </td>
+              <!-- <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                  <u>Cohort Offered</u><br>
+                Fall Cohort 2 (Apply by September 10)<br>
+                Dates: September 22 - October 20, 2021<br><br>
+                [NEW] Winter Cohort 1 (Apply by October 15)<br>
+                Dates: November 1 - December 3, 2021
+                </h2>
+              </td> -->
+            </tr>
+          </table>
+        </div>
+        <button onclick=window.location.href='https://forms.gle/kvYgiwQwL9mUMNAi6' style="margin-bottom: 5em; background-color: #da9fd1" class="trailer">Apply Now</button>
+      </center>
+    </div>
+
+
+
+    <div class="dimScreen" id="data-programming"  style="background: linear-gradient(180deg, transparent 8%, black),url('img/bg/dp.png');
+      background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+      <center>
+        <img src="img/icon/explorer.png" width="50em" style="margin-top: 10em; margin-bottom:0em;"/>
+        <br>
+        <h1 style="color: white; font-size: 3em; line-height: 0em;">Data Programming</h1>
+        <h2 style="color: white; padding-bottom: 2em; margin-left:10em; margin-right:10em;">
+          This class is for students new to coding where we will learn how to build complex programs and perform data analysis with Python.
+        </h2>
+
+
+        <div style="border: solid white 5px; margin-left:10em; margin-right:10em; margin-bottom: 3em;">
+          <table>
+            <tr>
+              <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                  <!-- <u>Participation Fee:</u> $150<br><br> -->
+                  <u>Topics Covered: </u>Python Data Types, Basic Data Structures, Data Science (Graphing, Analysis), Interactive User Programs with Python
+                </h2>
+              </td>
+              <!-- <td width="50%">
+                <h2 style="font-size: 1.2em; color: white; padding-left: 2em; padding-right: 2em; padding-bottom: 2.5em;">
+                  <u>Cohort Offered</u><br>
+                Fall Cohort 2 (Apply by September 10)<br>
+                Dates: September 22 - October 20, 2021<br><br>
+                [NEW] Winter Cohort 1 (Apply by October 15)<br>
+                Dates: November 1 - December 3, 2021
+                </h2>
+              </td> -->
+            </tr>
+          </table>
+        </div>
+        <button onclick=window.location.href='https://forms.gle/kvYgiwQwL9mUMNAi6'
+        style="margin-bottom: 5em; background-color: #68d4af" class="trailer">Apply Now</button>
+      </center>
+    </div>
+
+  <footer>
+    <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+    <h5 style="color: white">
+      <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a style="color: white" href="join.html">Join Us</a>
+      <br><br>
+      &copy; STEM League. All Rights Reserved.
+    </h5>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

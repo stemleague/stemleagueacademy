@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Tech World & Beyond</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/tech-beyond.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/tech-beyond.png" height="120em" style="bottom: 30px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <p style="font-size:20px;">
+          The Tech World is expansive and growing, hear from industry professionals<br>
+          about how to navigate it as a young aspiring STEM coder. We have talks from<br>
+          leading engineers and managers at T-Mobile, Microsoft, Google, and Cisco to share<br>
+          with you their personal journeys and advice.
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../tech-world-and-beyond/venture-into-tech-industry.html">
+                  <img class="thumb-icon" src="../img/thumbnail/venture into the tech industry.png"/>
+                </a>
+                <span class="small-description"><b>1. Venture Into The Tech Industry (21m)</b><br>
+                  This week, we will be hearing from a Senior Engineering Manager at Google Maps speak about her experiences entering the tech industry and her technical journey in her career and role.
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/how-to-become-a-ds.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/how to become a data scientist.png"/>
+                </a>
+                <span class="small-description"><b>2. How to Become A Data Scientist (37m)</b><br>
+                  T-Mobile Principal Data Scientist, Bari Mohammad, gives students insight on his journey to becoming a data scientist & shares some of his tips & advice!
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/into-life-of-pm.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/into the life of a program manager.png"/>
+                </a>
+                <span class="small-description"><b>3. Into the Life Of A Program Manager (25m)</b><br>
+                  Microsoft Program Manager, Ted Way, will share with us his pathway into tech and how you can one day follow his footsteps 
+                  to become a PM!
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/mentorship-and-beyond.html">
+                  <img class="thumb-icon" src="../img/thumbnail/mentorship and beyond.png"/>
+                </a>
+                <span class="small-description"><b>4. Mentorship & Beyond (24m)</b><br>
+                  Hear from an Expedia Software Engineer about the importance of mentorship in the tech field and how you can create long-lasting
+                  connections that will help you grow your career.
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/iot.html">
+                  <img class="thumb-icon" src="../img/thumbnail/demystifying internet of things.png"/>
+                </a>
+                <span class="small-description"><b>5. Demystifying The Internet Of Things (25m)</b><br>
+                  We will be hearing from an IoT Software Engineer from Cisco share the field of IoT and speak about his experiences working as an engineer on some cool IoT Projects and resources to start your own!
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/tmobile-tech-experience.html">
+                  <img class="thumb-icon" src="../img/thumbnail/t-mobile tech experience.png"/>
+                </a>
+                <span class="small-description"><b>6. T-Mobile Tech Experience</b><br>
+                  Tour T-Mobile's Tech Experience Center live at T-Mobile's Bellevue Headquarters and learn about the transformative impact of the future of 5G technology.
+                </span>
+              </li>
+              
+              <li>
+                <a href="../tech-world-and-beyond/cs-research.html">
+                  <img class="thumb-icon" src="../img/thumbnail/cs research.png"/>
+                </a>
+                <span class="small-description"><b>7. Computer Science Research (25m)</b><br>
+                  Learn how to think like a Researcher! Through this workshop we will learn about what is research, the topics to explore in CS research, and as a high school student how you can get involved!
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/tmobile-tech.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/t-mobile tech talk.png"/>
+                </a>
+                <span class="small-description"><b>8. T-Mobile Tech Talk (62m)</b><br>
+                  Watch this tech talk from inspiring engineers and managers at T-Mobile as they share their road into tech and advice!
+                </span>
+              </li>
+              <li>
+                <a href="../tech-world-and-beyond/cloud-computing.html">
+                  <img class="thumb-icon" src="../img/thumbnail/cloud computing.png"/>
+                </a>
+                <span class="small-description"><b>9. What is Cloud Computing? (6m)</b><br>
+                  You will be able to gain insight on what big companies are doing behind the scenes with cloud computing - Building large infrastructure to sustain businesses and processes all around the world at a blink of an eye.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Tech World & Beyond</b></p>
+                  <p style="font-size:20px;">
+                    Computer Science is an accelerating and growing field, with so many 
+                    roles that you can build the skills to take on. From Product Managements,
+                    to Software Engineering, the possibilities and opportunities are 
+                    endless. Dive into the Tech World & Beyond inspired by the our amazing supporters at
+                    T-Mobile, Microsoft, Google, and Expedia.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    225m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Tech World & Beyond<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Christin Lin<br>
+                    Harleen Kaur<br>
+                    Jyoti Llama<br>
+                    Michelle Balatico<br>
+                    Locksley Kolakowski
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

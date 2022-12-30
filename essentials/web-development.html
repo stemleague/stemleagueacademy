@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/wd.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/wd.png" height="100em" style="bottom: 25px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <b>Web Development • Developer Essentials</b><br>
+        <p style="font-size:20px;">
+          What's coding without a little fun with web development? Learn how to develop<br>
+          your own websites from scratch with HTML, CSS, and Javascript!
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1UdbFY8GmhVL90-ywlueSq50LvaYhLZaRLyzjsWsIIPM/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/intro to web dev.png"/></a>
+                <span class="small-description"><b>1. Intro to Web Dev (23m)</b><br>
+                  <p class="ep-description">What is web development? How does the Internet really work?</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/intro-to-web-dev')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/intro-to-web-dev/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1Kh7pivRHlHJHERGwMVLUVXCSQU97aB4l-OkJw7UKufY/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/dive into html.png"/></a>
+                <span class="small-description"><b>2. Dive into HTML (22m)</b><br>
+                  <p class="ep-description">It's time to get equipped with HTML syntax and try building your own website.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/dive-into-html')"
+                  class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/dive-into-html/slides')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1ZL9G_rbGroIPpiMatXoanQ3O3JgCpjWlKblRI188iI0/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/css layout.png"/></a>
+                <span class="small-description"><b>3. CSS Layout (25m)</b><br>
+                  <p class="ep-description">Break down how to resize your sites for various screen sizes using flexbox.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/css-layout')"
+                  class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/css-layout/slides')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1EbI63ymD7mjhwZpzw45YRXiQGp3tAloboQFMPAND7aU/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/buttons and animations.png"/></a>
+                <span class="small-description"><b>4. Buttons & Animations (21m)</b><br>
+                  <p class="ep-description">What if you could animate your projects? That's a possibility with CSS!</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/buttons-animations')"
+                  class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/buttons-animations/slides')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              
+              <li>
+                <a href="https://docs.google.com/presentation/d/1hUJwMBQ8_3f3rJdUyxQ1-7ya4oOcLg5MvWIBPYjkweg/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/intro to javascript.png"/></a>
+                <span class="small-description"><b>5. Intro to Javascript (18m)</b><br>
+                  <p class="ep-description">HTML and CSS finished! Now let's decide what behavior we want our sites to have.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/intro-to-javascript')"
+                  class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/intro-to-javascript/slides')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1w7ZI78X3f1VLNtHoarND0j9-j53xqK24L5TJHaz3wPM/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/javascript functions.png"/></a>
+                <span class="small-description"><b>6. Javascript Functions (27m)</b><br>
+                  <p class="ep-description">Divide and conquer using functions to craft the site functionality and surprises.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/javascript-functions')"
+                  class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/web-development/javascript-functions/slides')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Web Development</b></p>
+                  <p style="font-size:20px;">
+                    Want to create your own websites hosted on
+                    Github? The Web Development Track will
+                    provide a practical approach in learning
+                    HTML/CSS and Javascript to make dynamic &
+                    reactive webpages. Topics covered include
+                    HTML/CSS, Javascript, UX Design and
+                    Accessibility, and Game Development.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    136m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Developer Essentials<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Elizabeth Lin<br>
+                    Kristie Lim<br>
+                    Elisa Troung<br>
+                    Dena Sabha<br>
+                    Priyanka Iyer<br>
+                    Caroline Mao<br>
+                    Sally Zhou
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

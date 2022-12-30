@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Explorer Program: Web Development</title>
+	<link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<style>
+    .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container, .all {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+.pad-table {
+  padding-top: 0.1em;
+  padding-left: 0.65em;
+  padding-right: 0.65em;
+  padding-bottom:4em;
+  width: 20%;
+  height: 0em;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+img.logo {
+  height: 90px;
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+#dialog {
+  background-color: white;
+  position: fixed;
+  text-align: center;
+}
+h2 {
+  -webkit-transition: color 0.5s; /* For Safari 3.0 to 6.0 */
+  transition: color 0.5s; /* For modern browsers */
+}
+h2:hover {
+  color: #ffccf7;
+}
+</style>
+
+<body>
+  <div class="se-pre-con"></div>
+  <!-- navigation bar -->
+  <div id="names">
+    <div class="header" style="background-color: black;">
+      <a href="index.html"><img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="home.html">HOME</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icon/search.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "search.html">SEARCH</a>   
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/explorer.png' width="23em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a style="color:white" href="explorer.html">EXPLORER</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='explorer-cp.html' class="cpc underline">COMPUTER PROGRAMMING</p>
+            <br><br>
+            <p onclick=window.location.href='explorer-dp.html' class="dpc underline">DATA PROGRAMMING</p>
+            <br><br>
+            <p onclick=window.location.href='explorer-wd.html' class="wdc underline">WEB DEVELOPMENT</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/developer.png' width="26em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a style="color:white" href="https://stemleague.cs.washington.edu/apply.html">DEVELOPER</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='data-programming.html' class="dpc underline">DATA PROGRAMMING</p>
+            <br><br>
+            <p onclick=window.location.href='web-development.html' class="wdc underline">WEB DEVELOPMENT</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/globe.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a>COMMUNITY</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='community.html' class="underline">Fall 2021</p>
+            <br><br>
+            <p onclick=window.location.href='summer21.html' class="underline">Summer 2021</p>
+            <br><br>
+            <p onclick=window.location.href='https://stemleague.github.io/login/final-showcase.html' class="underline">Summer 2020</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/vault.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="https://sites.google.com/view/stem-league-library/front-desk">LIBRARY</a>
+        <button class="login" onclick=window.open("https://gofundme.com/2021-stem-league-developer-program-fund")>SUPPORT US</button>
+      </h4>
+    </div>
+
+
+    
+    <div id="upcoming" style="padding-top:5em; display: block;">
+    </div>
+
+    <h1 style="font-size: 40px; text-align: left; color: #ffccf7;">
+      E&nbsp;X&nbsp;P&nbsp;L&nbsp;O&nbsp;R&nbsp;E&nbsp;R&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;E&nbsp;B&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;V&nbsp;E&nbsp;L&nbsp;O&nbsp;P&nbsp;M&nbsp;E&nbsp;N&nbsp;T
+    </h1>
+    <hr>
+    <table width="100%">
+      <tr>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;1&nbsp;
+            </p>
+            <li style="padding-top: 0em; padding-left: 0em;">
+                <p class="pinkday"><b>WEDNESDAY, SEPTEMBER 22</b>
+                <a style="color:white;" href="https://docs.google.com/presentation/d/142_BxASKPKpe53SwtfsmZ3pqvua9BRIe8X-oyRROE44/present?slide=id.ge4bc9368e6_0_0" target="_blank">
+                  <h2 class="pinkcap">Intro to Web Development&nbsp;&nbsp;
+                  <a href="https://docs.google.com/presentation/d/1UkoBvCrRRR7HO_U0tp9u-ZuiA5YZHzCLt1ia5GYOChA/present?slide=id.p" target="_blank" style="display: inline-block; white-space:nowrap;">
+                    <img class="read-icon" style="width:1em;" src="img/icon/ppt.png"/>
+                  </a>
+                </h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, SEPTEMBER 23</b></p>
+              <a href="https://forms.gle/9F4bjiaEDRvzK5kR7" target="_blank" >
+                <h2 class="pinkcap">Lesson 1 Quiz</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 1</b></p>
+              <a href="https://docs.google.com/presentation/d/10SwQk35j8XMaa5avkJGfLtryvd52vxPVDm-wovoBayM/present?slide=id.p" target="_blank" >
+              <h2 class="pinkcap">Project 1: Business Card (Part 1)</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;2&nbsp;
+            </p>
+            <li style="padding-top: 0em; padding-left: 0em;">
+                <p class="pinkday"><b>WEDNESDAY, SEPTEMBER 29</b>
+                <a style="color:white;" href="https://docs.google.com/presentation/d/1kiSCBG45wIeQeSyhER08s_d1qX98drPLwcr1I9DGE8A/present?slide=id.ge4bc9368e6_0_0" target="_blank">
+                  <h2 class="pinkcap">CSS and Accessibility&nbsp;&nbsp;
+                  <a href="https://docs.google.com/presentation/d/1QUqj3LXnYzUxvxFbhw0KXIZFVFK_J16Js64lsmKx5XA/present?slide=id.p" target="_blank" style="display: inline-block; white-space:nowrap;">
+                    <img class="read-icon" style="width:1em;" src="img/icon/ppt.png"/>
+                  </a>
+                </h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE MONDAY, OCTOBER 4</b></p>
+              <a href="https://forms.gle/JVa6Ek1wfzbHm9mW6" target="_blank" >
+                <h2 class="pinkcap">Lesson 2 Quiz</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"></p>
+              <h2 class="pinkcap"></h2>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;3&nbsp;
+            </p>
+            <li style="padding-top: 0em; padding-left: 0em;">
+                <p class="pinkday"><b>WEDNESDAY, OCTOBER 6</b>
+                <a style="color:white;" href="https://docs.google.com/presentation/d/132FQekLIpO5e4M0eCItKwMmBNr_bI9C5kz87vzp-zC8/present?slide=id.ge4bc9368e6_0_0" target="_blank">
+                  <h2 class="pinkcap">Bootstrap & Responsive Design&nbsp;&nbsp;
+                  <a href="https://docs.google.com/presentation/d/1F1VNZ8Tk6tg4XX2P0CYbJOZRDomSl1rG2mXQC_3GXAA/present?slide=id.p" target="_blank" style="display: inline-block; white-space:nowrap;">
+                    <img class="read-icon" style="width:1em;" src="img/icon/ppt.png"/>
+                  </a>
+                </h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 14</b></p>
+              <a href="https://forms.gle/3pzrH4aW8SHFP54VA" target="_blank" >
+                <h2 class="pinkcap">Lesson 3 Quiz</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 14</b></p>
+              <a href="https://docs.google.com/presentation/d/13baaI0LXE17F4Im6Pwk2Kl8Z0xhmsd3tG06RBvuq_6g/present?slide=id.p" target="_blank" >
+              <h2 class="pinkcap">Project 3: Responsive Webpages</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;4&nbsp;
+            </p>
+            <li style="padding-top: 0em; padding-left: 0em;">
+                <p class="pinkday"><b>WEDNESDAY, OCTOBER 13</b>
+                <a style="color:white;" href="https://docs.google.com/presentation/d/1isNUVmxxTz7aB88HIEegvFcFqpmhGGEpTdZWWpcB9tU/present?slide=id.ge4bc9368e6_0_0" target="_blank">
+                  <h2 class="pinkcap">Javascript Fundamentals&nbsp;&nbsp;
+                  <a href="https://docs.google.com/presentation/d/1rif4nIB9h2ntGnzJpg1Jc98rIB1VBV3K4FpCx-IzlQk/present?slide=id.p" target="_blank" style="display: inline-block; white-space:nowrap;">
+                    <img class="read-icon" style="width:1em;" src="img/icon/ppt.png"/>
+                  </a>
+                </h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 21</b></p>
+              <a href="https://forms.gle/63EfnjuLQwy1yvck7" target="_blank" >
+                <h2 class="pinkcap">Lesson 4 Quiz</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 21</b></p>
+              <a href="https://docs.google.com/presentation/d/13baaI0LXE17F4Im6Pwk2Kl8Z0xhmsd3tG06RBvuq_6g/present?slide=id.p" target="_blank" >
+              <h2 class="pinkcap">Explorer Capstone</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <p class="pinktitle">
+              W&nbsp;E&nbsp;E&nbsp;K&nbsp;&nbsp;5&nbsp;
+            </p>
+            <li style="padding-top: 0em; padding-left: 0em;">
+                <p class="pinkday"><b>WEDNESDAY, OCTOBER 20</b>
+                <a style="color:white;" href="https://docs.google.com/presentation/d/1utJ7CECs0Vf77FcCnd4FaIYjuKViLmSdsh1TW8A0TH4/present?slide=id.ge4bc9368e6_0_0" target="_blank">
+                  <h2 class="pinkcap">Web Development & Beyond&nbsp;&nbsp;
+                  <a href="https://docs.google.com/presentation/d/1NK6Kt8AQdp7V556tE69BrMUIMSiRuWZ7LzkoeCdsNEU/present?slide=id.p" target="_blank" style="display: inline-block; white-space:nowrap;">
+                    <img class="read-icon" style="width:1em;" src="img/icon/ppt.png"/>
+                  </a>
+                </h2>
+                </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              <p class="pinkday"><b>DUE THURSDAY, OCTOBER 21</b></p>
+              <a href="https://forms.gle/qm923Jp2yzdrZbUN7" target="_blank" >
+                <h2 class="pinkcap">Exit Survey</h2>
+              </a>
+            </li>
+          </ul>
+        </td>
+        <td width="33.33%">
+          <ul id="pinklist">
+            <li style="padding-top: 0em;">
+              
+            </li>
+          </ul>
+        </td>
+      </tr>
+      
+
+      
+    </table>
+
+  </div>
+
+  <footer>
+    <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+    <h5 style="color: white">
+      <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a style="color: white" href="join.html">Join Us</a>
+      <br><br>
+      &copy; STEM League. All Rights Reserved.
+    </h5>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

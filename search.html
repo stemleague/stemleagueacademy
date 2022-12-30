@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+	<link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<style>
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container, .all {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+img.logo {
+  height: 90px;
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+#all {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.cell {
+  width:25%;
+  padding-bottom: 30px;
+  /* background:#ddd; */
+}
+</style>
+
+<body>
+  <div class="se-pre-con"></div>
+  <!-- navigation bar -->
+  <div id="names">
+    <div class="header" style="background-color: black;">
+      <a href="index.html"><img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="home.html">HOME</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icon/search.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "search.html">SEARCH</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/developer.png' width="26em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "crack-the-code.html">CRACK THE CODE</a>
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src='img/icon/developer.png' width="26em"/>
+          &nbsp;&nbsp;&nbsp;
+          <div class="dropdown">
+            <a style="color:white" href="data-programming.html">DATA PROGRAMMING</a>
+            <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+              <br>
+              <p onclick=window.location.href='data-programming.html' class="dpc underline">DATA PROGRAMMING</p>
+              <br><br> 
+              <p onclick=window.location.href='web-development.html' class="wdc underline">WEB DEVELOPMENT</p>
+            </div>
+          </div> -->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/globe.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a>COMMUNITY</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='community.html' class="underline">Fall 2021</p>
+            <br><br>
+            <p onclick=window.location.href='summer21.html' class="underline">Summer 2021</p>
+            <br><br>
+            <p onclick=window.location.href='https://stemleague.github.io/login/final-showcase.html' class="underline">Summer 2020</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <img src='img/icon/vault.png' width="20em"/>
+          &nbsp;&nbsp;&nbsp;
+          <a class="underline" href="https://sites.google.com/view/stem-league-library/front-desk">LIBRARY</a>
+        <button class="login" onclick=window.open("https://www.gofundme.com/f/2022-stem-league-developer-program-fund")>SUPPORT US</button>
+      </h4>
+    </div>
+    
+    <input type="search" id="myInput" onkeyup="myFunction('')" placeholder="Search by title, category, keywords...">
+    
+    <div class="dropdown">
+      <button id="loadWebDev" class="dropbtn wd-color">Web Development</button>
+      <div class="dropdown-content">
+        <a id="loadWebDevLessons">Lessons</a>
+        <a id="loadWebDevCodingSessions">Coding Sessions</a>
+        <a id="loadWebDevWorkshops">Workshops</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button id="loadDataProg" class="dropbtn dp-color">Data Programming</button>
+      <div class="dropdown-content">
+        <a id="loadDataProgLessons">Lessons</a>
+        <a id="loadDataProgCodingSessions">Coding Sessions</a>
+        <a id="loadDataProgWorkshops">Workshops</a>
+      </div>
+    </div>
+
+    <button id="loadCTC" class="dropbtn ctc">Crack the Code</button>
+    <button id="loadEssentials" class="dropbtn essentials">Essentials</button>
+    <button id="loadMarvel" class="dropbtn marvel">Avengers Retreat</button>
+    <button id="loadBrownBag" class="dropbtn brown">Brown Bags Talks</button>
+    <br>
+    <button id="loadGaming" class="dropbtn gaming">Gaming</button>
+    <button id="loadUX" class="dropbtn ux">UX Design</button>
+    <button id="loadCareer" class="dropbtn career">Career Development</button>
+    <button id="loadTechW" class="dropbtn techw">Tech World & Beyond</button>
+    <button id="loadDataSci" class="dropbtn datasci">Data Science</button>
+
+    <div id="all"></div>
+
+    <footer>
+      <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+      <h5 style="color: white">
+        <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style="color: white" href="join.html">Join Us</a>
+        <br><br>
+        &copy; STEM League. All Rights Reserved.
+      </h5>
+    </footer>
+
+    <script>
+      var essentials = new Map([
+        ["2021 developer program graduation", "essentials/2021-grad.html"],
+        ["developer hacks 2021", "https://docs.google.com/presentation/d/1gDOHXDL1w7-dtm1EHvxcBzflKhDgcDjWZ3Prpa6-7K0/present?slide=id.p"],
+        ["2020 developer final projects", "essentials/2020-final-project.html"],
+        ["using discord", "essentials/discord.html"],
+        ["replit", "essentials/replit.html"],
+        ["web development series", "essentials/web-development.html"],
+        ["data programming series", "essentials/data-programming.html"],
+        ["gaming game development series", "tracks/gaming.html"],
+        ["career development career dev series", "tracks/career-development.html"],
+        ["data science analysis series", "tracks/data-science.html"],
+        ["ux design accessibility series", "tracks/ux-design.html"],
+        ["tech world and beyond series", "tracks/tech-and-beyond.html"],
+        ["crack the code series", "tracks/crack-the-code.html"],
+        ["stem brown bags series", "tracks/brown-bag.html"],
+        ["avengers retreat coding tournament series", "tracks/avengers-retreat.html"],
+        ["how to start a stem league club series", "tracks/stem-league-club.html"],
+        ["how to start a stem league club series", "tracks/stem-league-club.html"],
+      ])
+
+      var gaming = new Map([
+        ["gaming game development series", "tracks/gaming.html"],
+        ["pop up penguins", "gaming/pop-up-penguins.html"],
+        ["deathly hallows", "gaming/deathly-hallows.html"],
+        ["cookie party", "gaming/cookie-party.html"],
+        ["ttt1", "gaming/ttt.html"],
+        ["rpg1", "gaming/rpg.html"],
+      ]);
+
+      var ux = new Map([
+        ["ux design accessibility series", "tracks/ux-design.html"],
+        ["accessibility and ux design", "ux-design/accessibility.html"],
+        ["figma", "ux-design/figma.html"],
+      ]);
+
+      var career = new Map([
+        ["career development career dev series", "tracks/career-development.html"],
+        ["make your own portfolio", "career-development/make-your-own-portfolio.html"],
+        ["intern panel", "career-development/intern-panel.html"],
+        ["career ready", "career-development/career-ready.html"],
+        ["host git", "career-development/host-github-pages.html"],
+        ["web apis", "career-development/web-apis.html"],
+        ["magenta career talk", "career-development/magenta-talk.html"],     
+      ]);
+
+      var avengers = new Map([
+      ["avengers retreat coding tournament series", "tracks/avengers-retreat.html"],
+        ["quantumbug", "avengers-retreat/quantum-bug.html"],
+        ["blackwidow", "avengers-retreat/black-widow.html"],
+        ["staycation", "avengers-retreat/staycation.html"],
+        ["tooclosetohome", "avengers-retreat/too-close-to-home.html"],
+        ["breakout", "avengers-retreat/breakout.html"],
+      ]);
+
+      var datasci = new Map([
+      ["data science analysis series", "tracks/data-science.html"],
+      ["covid economic data visualization", "data-science/covid-viz.html"],
+      ["ecoml", "data-science/economics-and-ml.html"],
+      ["police data web app", "data-science/police-data-web-app.html"],
+      ["webscrap", "data-science/web-scraping.html"],
+      ]);
+
+      var ctc = new Map([
+      ["crack the code series", "tracks/crack-the-code.html"],
+      ["approaching coding problems", "#"],
+      ["palindrome numbers", "#"],
+      ]);
+
+      var techw = new Map([
+        ["tech world and beyond series", "tracks/tech-and-beyond.html"],
+        ["venture into the tech industry", "tech-world-and-beyond/venture-into-tech-industry.html"],
+        ["how to become a data scientist", "tech-world-and-beyond/how-to-become-a-ds.html"],
+        ["into the life of a program manager", "tech-world-and-beyond/into-life-of-pm.html"],
+        ["mentorship and beyond", "tech-world-and-beyond/mentorship-and-beyond.html"],
+        ["cs research", "tech-world-and-beyond/cs-research.html"],
+        ["demystifying internet of things", "tech-world-and-beyond/iot.html"],
+        ["t-mobile tech talk", "tech-world-and-beyond/tmobile-tech.html"],
+        ["cloud computing", "tech-world-and-beyond/cloud-computing.html"],
+        ["t-mobile tech experience", "tech-world-and-beyond/tmobile-tech-experience.html"],
+      ]);
+
+      var brownBag = new Map([
+        ["stem brown bags series", "tracks/brown-bag.html"],
+        ["a day in the life of a software engineer", "brown-bag/swe.html"],
+        ["imagineering a fireside chat", "brown-bag/imagineering.html"],
+        ["dna data storage", "brown-bag/dna.html"],
+        ["computing and accessibility talk", "brown-bag/computing-accessibility.html"],
+        ["fireside chat with product manager from roblox", "brown-bag/roblox.html"],
+        // ["journey with computer science", "brown-bag/cs-journey.html"],
+      ]);
+
+      var webDevWorkshops = new Map([
+        ["pop up penguins", "gaming/pop-up-penguins.html"],
+        ["make your own portfolio", "career-development/make-your-own-portfolio.html"],
+      ]);
+
+      var webDevCodingSessions = new Map([
+        ["about me", "web-development/about-me.html"],
+        ["donut cat", 'web-development/donut-cat.html'],
+        ["card collection", "web-development/card-collection.html"],
+        ["animation magic", "web-development/animation-magic.html"],
+        ["baymax", "web-development/baymax.html"],
+        ["minion machine", "web-development/minion-machine.html"],
+      ]);
+      var webDevLessons = new Map([
+        ["web development series", "essentials/web-development.html"],
+        ["intro to web dev", "web-development/intro-to-web-dev.html"],
+        ["dive into html", "web-development/dive-into-html.html"],
+        ["css layout", "web-development/css-layout.html"],
+        ["buttons and animations", "web-development/buttons-and-animations.html"],
+        ["intro to javascript", "web-development/intro-to-js.html"],
+        ["javascript functions", "web-development/js-functions.html"],
+      ]);
+      
+      var dataProgLessons = new Map([
+        ["data programming series", "essentials/data-programming.html"],
+        ["intro to python", "data-programming/intro-to-python.html"],
+        ["conditionals", "data-programming/conditionals.html"],
+        ["lists and indexing", "data-programming/lists-and-indexing.html"],
+        ["sets and slicing", "data-programming/sets-and-slicing.html"],
+        ["for loops", "data-programming/for-loops.html"],
+        ["while loops", "data-programming/while-loops.html"],
+      ]);
+      var dataProgCodingSessions = new Map([
+        ["mad libs", "data-programming/mad-libs.html"],
+        ["space travel", "data-programming/space-travel.html"],
+        ["sorting hat", "data-programming/sorting-hat.html"],
+        ["college admissions", "data-programming/college-admissions.html"],
+        ["dna analysis", "data-programming/dna-analysis.html"],
+        ["guessing game", "data-programming/guessing-game.html"],
+      ]);
+      var dataProgWorkshops = new Map([
+          ["marvelous journey", "data-programming/marvel.html"],
+          ["we bare bears", "data-programming/we-bare-bear-adventures.html"],
+          ["deathly hallows", "gaming/deathly-hallows.html"]          
+      ]);
+  
+  function clear() {
+    document.getElementById("all").innerHTML = "";
+  }
+
+  // loads all the thumbnails for each content box
+  function loadDiv(myMap, keywords) {
+    var divEntry = "";
+    var id;
+    if (keywords.charAt(0) != "_" || keywords.charAt(0) == "") {
+      clear();
+    }
+    Array.from(myMap.keys()).map(title => {
+      var link = myMap.get(title);
+      id = title.toLowerCase().split(' ').join('_');
+      divEntry = '<div class="cell" id="' + id + keywords + '"><a href="' + link + '"><img class="thumb_image" width="90%" height="auto" src="img/thumbnail/' + title + '.png" style="border-radius:4%;"></a></div>';
+      $("#all").append(divEntry);
+    });
+  }
+
+// main method, run loadAll(1) on each page refresh
+loadAll(1);
+
+// function that is ran on each refresh
+function loadAll(n) {
+  clear();
+  // we'll figure this out later..
+  if (n == 0) {
+    loadDiv(essentials, "_essentials");
+  }
+  loadDiv(webDevLessons, "_wd_web_development_lessons");
+  loadDiv(webDevCodingSessions, "_wd_web_development_coding_sessions");
+  loadDiv(webDevWorkshops, "_wd_web_development_workshops");
+  loadDiv(dataProgLessons, "_dp_data_programming_lessons");
+  loadDiv(dataProgCodingSessions, "_dp_data_programming_coding_sessions");
+  loadDiv(dataProgWorkshops, "_dp_data_programming_workshops");
+  loadDiv(gaming, "_gaming");
+  loadDiv(ux, "_ux_design_accessibility_html_css");
+  loadDiv(career, "_career_development");
+  loadDiv(datasci, "_data_science_python");
+  loadDiv(techw, "_tech_world_and_beyond");
+  loadDiv(avengers, "_avengers_tournament_coding");
+  loadDiv(brownBag, "_brown_bag_talk_stem");
+}
+
+document.getElementById("loadGaming").addEventListener("click", function(){
+  loadDiv(gaming, 'gaming')
+});
+document.getElementById("loadUX").addEventListener("click", function(){
+  loadDiv(ux, 'uxDesign')
+});
+document.getElementById("loadDataSci").addEventListener("click", function(){
+  loadDiv(datasci, 'DataScience')
+});
+
+document.getElementById("loadCTC").addEventListener("click", function(){
+  loadDiv(ctc, 'CrackTheCode')
+});
+document.getElementById("loadEssentials").addEventListener("click", function(){
+  loadDiv(essentials, 'Essentials')
+});
+document.getElementById("loadCareer").addEventListener("click", function(){
+  loadDiv(career, 'CareerDevelopment')
+});
+document.getElementById("loadTechW").addEventListener("click", function(){
+  loadDiv(techw, 'TechWorldAndBeyond')
+});
+
+document.getElementById("myInput").addEventListener("focus", function(){
+  loadAll(0);
+});
+document.getElementById("loadBrownBag").addEventListener("click", function(){
+  loadDiv(brownBag, '#STEMBrownBagTalks')
+});
+
+document.getElementById("loadMarvel").addEventListener("click", function(){
+  loadDiv(avengers, 'Avengers Coding Tournament')
+});
+
+document.getElementById("loadWebDevLessons").addEventListener("click", function(){
+  loadDiv(webDevLessons, 'Lessons')
+});
+document.getElementById("loadWebDevCodingSessions").addEventListener("click", function(){
+  loadDiv(webDevCodingSessions, 'Coding Sessions')
+});
+document.getElementById("loadWebDevWorkshops").addEventListener("click", function(){
+  loadDiv(webDevWorkshops, 'Activities')
+});
+document.getElementById("loadWebDev").addEventListener("click", function(){
+  var webDev = new Map([...webDevLessons, ...webDevCodingSessions, ...webDevWorkshops])
+  loadDiv(webDev, 'All')
+});
+document.getElementById("loadDataProgLessons").addEventListener("click", function(){
+  loadDiv(dataProgLessons, 'Lessons')
+});
+document.getElementById("loadDataProgCodingSessions").addEventListener("click", function(){
+  loadDiv(dataProgCodingSessions, 'Coding Sessions')
+});
+document.getElementById("loadDataProgWorkshops").addEventListener("click", function(){
+  loadDiv(dataProgWorkshops, 'Activities')
+});
+document.getElementById("loadDataProg").addEventListener("click", function(){
+  var dataProg = new Map([...dataProgLessons, ...dataProgCodingSessions, ...dataProgWorkshops])
+  loadDiv(dataProg, 'All')
+});
+
+
+// whenever the user types in a text into search bar
+// runs this function
+function myFunction(query) {
+  var input, filter, table, tr, td, i, txtValue, entries;
+  input = document.getElementById("myInput");
+  //console.log("hersh ur input is" + input);
+  // for loop through each <div id="all">
+  $('#all').find('div').each(function() {
+    var innerDivId = $(this).attr('id');
+    var cleanedId = innerDivId.toLowerCase().split('_').join(' ');
+    var userInput = input.value;
+    if (query.length > 1) {
+      userInput = query;
+    }
+
+    if (userInput == "") {
+        $('.cell').css('display','');
+    } else if (cleanedId.indexOf(userInput) !== -1) {
+        $('#' + innerDivId).css('display','');
+    } else {
+        $('#' + innerDivId).css('display','none');
+    }
+  });
+}
+
+$(window).load(function() {
+  $(".se-pre-con").fadeOut("slow");;
+});
+</script>
+
+</body>
+</html>

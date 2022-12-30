@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Data Programming</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/dp.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/dp.png" height="100em" style="bottom: 25px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <b>Data Programming • Developer Essentials</b><br>
+        <p style="font-size:20px;">
+          Dive into Python as we learn the basics and build off practicing data structures<br>
+          to build complex programs!<br>      
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="https://docs.google.com/presentation/d/11tEWdMzWMsHztBz9Ahzdx11USda59PXIZMYuq5lHc7c/present?slide=id.ge4bc9368e6_0_0"><img class="thumb-icon" src="../img/thumbnail/intro to python.png"></a>
+                <span class="small-description"><b>1. Introduction to Python (13m)</b><br>
+                  <p class="ep-description">What is code? Learn about how we use Python for programming.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/intro-to-python')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/intro-to-python/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/19KEZN1hVy7BCR2qG20mWB9X4Zp3HA6UpfkmVrWJgMRk/present?slide=id.ge4bc9368e6_0_0"><img class = "thumb-icon" src="../img/thumbnail/conditionals.png"></a>
+                <span class="small-description"><b>2. Conditionals (18m)</b><br>
+                  <p class="ep-description">How do we structure Python logic? Using if statements!</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/conditionals')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/conditionals/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1vm1nqMOiBjsMvgbKJEejC5JA7DEIyZEY2REKjL95Urc/present?slide=id.ge4bc9368e6_0_0"><img class = "thumb-icon" src="../img/thumbnail/lists and indexing.png"></a>
+                <span class="small-description"><b>3. Lists & Indexing (24m)</b><br>
+                  <p class="ep-description">How do we store useful information in our code? Let's learn about lists, our first Python data structure.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/lists-indexing')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/lists-indexing/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1-P5jO0vrk-mJsEOZN9iEDEvo1vagMuEUcJPbnDDpmO8/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/sets and slicing.png" />
+                </a>
+                <span class="small-description"><b>4. Sets & Slicing (30m)</b><br>
+                  <p class="ep-description">Sets are another data structure that enables us to bring flexibility in data analysis.</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/sets-slicing')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/sets-slicing/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              
+              <li>
+                <a href="https://docs.google.com/presentation/d/1z7jAOMDgYMBKjJr0QYzWlOJFSiCFA3uinNBvNeTtPN0/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/for loops.png"/>
+                </a>
+                <span class="small-description"><b>5. For Loops (18m)</b><br>
+                  <p class="ep-description">Time to automate our code with the power of loops!</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/for-loops')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/for-loops/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/presentation/d/1sGKOsSVnuW4YjUx1QQ-SlmHVLQqqk5QuUbJlu9U9AzM/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/while loops.png"/>
+                </a>
+                <span class="small-description"><b>6. While Loops (22m)</b><br>
+                  <p class="ep-description">While loops introduce similar logic to for loops, with a fun (and tricky) twist!</p>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/while-loops')"
+                    class="reading" target="_blank">Reading</button>
+                  <button onClick="window.open('https://sites.google.com/view/stem-league-library/data-programming/while-loops/slides')"
+                    class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Data Programming</b></p>
+                  <p style="font-size:20px;">
+                    Challenge yourself through our Data
+                    Programming Track where students will be
+                    equipped with Python Fundamentals, learn
+                    how to utilize libraries for data analysis
+                    and visualization. Dive into workshops to
+                    analyze data with machine learning
+                    techniques and create Python games.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    125m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Developer Essentials<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Elizabeth Lin<br>
+                    Christin Lin<br>
+                    Harleen Kaur<br>
+                    Alicia Kincaid<br>
+                    Jyoti Lama<br>
+                    Rohan Harish<br>
+                    Prathisha Shyamusundar<br>
+                    Sabreena Yang
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Data Science</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/bb.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/brown-bag.png" height="240em" style="bottom: 30px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:7.5em;">
+        <p style="font-size:20px;">
+          Inspired by "Brown Bag Lunches," this series is developed to bring students into a conversation-style session where 
+          speakers share various topics in computing applications and interact with students through Q & A.
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Episodes</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColor(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../brown-bag/swe.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/a day in the life of a software engineer.png"/>
+                </a>
+                <span class="small-description"><b>1. Day in the Life of a Software Engineer (44m)</b><br>
+                    Hear from Software Engineers at Microsoft and Lyft about steps you can take to pursue a career in software engineering.
+                </span>
+              </li>
+              <li>
+                <a href="../brown-bag/imagineering.html">
+                  <img class="thumb-icon" src="../img/thumbnail/imagineering a fireside chat.png"/>
+                </a>
+                <span class="small-description"><b>2. Imagineering, a Fireside Chat (59m)</b><br>
+                    A current intern at Disney will share her experience in STEM through a fun conversation with Developers.
+                </span>
+              </li>
+              <li>
+                <a href="../brown-bag/computing-accessibility.html">
+                  <img class="thumb-icon" src="../img/thumbnail/computing and accessibility talk.png"/>
+                </a>
+                <span class="small-description"><b>3. Computing and Accessibility Talk by UW CSE (62m)</b><br>
+                    Renowned UW Computer Science Professor, Richard Ladner share his research in assistive technology.
+                </span>
+              </li>
+              <li>
+                <a href="../brown-bag/dna.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/dna data storage.png"/>
+                </a>
+                <span class="small-description"><b>4. DNA Data Storage by UW CSE</b><br>
+                    Learn about Computer Science Research from Microsoft Senior Researcher working on DNA Data Storage applications at UW CSE Department.
+                </span>
+              </li>
+              <li>
+                <a href="../brown-bag/roblox.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/fireside chat with product manager from roblox.png"/>
+                </a>
+                <span class="small-description"><b>5. Fireside Chat with Product Manager from Roblox</b><br>
+                    Jump into converation with Isabel, a Product Manager at Roblox and a 2021 STEM League Mentor.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Data Science</b></p>
+                  <p style="font-size:20px;">
+                    #STEM Brown Bag Talks are dedicated to provide a tight-knit community 
+                    chat and learning opportunity for students to understand facets of 
+                    computing applications and roles in tech. We invite professional speakers 
+                    and our Program Mentors to share their journey and advice.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    145m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2021<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Brown Bags<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Speakers:</b>
+                    <br>
+                    Quinn Liu<br>
+                    Angela Kihiko<br>
+                    Professor Richard Ladner<br>
+                    Yuan-Jyue Chen<br>
+                    Isabel Abonitalla
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

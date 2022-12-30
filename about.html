@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>STEM League+</title>
+	<link rel="icon" width="100%" href="favicon.ico" height="auto">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<style>
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container, .all {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+table {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+img.logo {
+  height: 90px;
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+td {
+  /* width: 0%; */
+  margin: 0em;
+  padding: 2em;
+}
+</style>
+
+<body>
+  <div class="se-pre-con"></div>
+  <!-- navigation bar -->
+  <div id="names">
+    <div class="header" style="background-color: black;">
+      <a href="index.html"><img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="home.html">HOME</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icon/search.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "search.html">SEARCH</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/globe.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a>COMMUNITY</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='community.html' class="underline">Fall 2021</p>
+            <br><br>
+            <p onclick=window.location.href='summer21.html' class="underline">Summer 2021</p>
+            <br><br>
+            <p onclick=window.location.href='https://stemleague.github.io/login/final-showcase.html' class="underline">Summer 2020</p>
+          </div>
+        </div>
+        <button class="login" onclick=window.open("https://gofundme.com/2021-stem-league-developer-program-fund")>SUPPORT US</button>
+      </h4>
+    </div>
+
+    <table style="color:white; padding:8em;" width="100%">
+      <tr>
+        <td style="text-align: left;">
+            <h3 style="font-size: 3em;">
+            <center><b>About Us</b></center></h3>
+              <br>
+            STEM League+ is a learning service offered by STEM League. Launched in 2021 after the success of the
+            Developer Program, it provides an interactive learning platform for young students to learn coding and 
+            STEM-related topics. We are currently releasing new content each month.
+            <br><br>
+            We require STEM League+ users to be subscribed or be enrolled as a student in the Explorer or Developer Program
+            in order to gain access to our full curriculum. We encourage support from our community in order to continue
+            providing accessible STEM Education for students of all backgrounds.
+            <br><br>
+            <a style="color: white; text-decoration: underline;" href="https://www.linkedin.com/in/elin6/">Elizabeth Lin</a>, the Co-Founder of STEM League, developed STEM League+
+            and manages all content updates to the platform. If you have any questions or are interested in a partnership
+            with STEM League, please reach out to us over email at stemleague18@gmail.com.
+          
+        </td>
+      </tr>
+    </table>
+  
+    <footer>
+      <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+      <h5 style="color: white">
+        <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style="color: white" href="subscribe.html">Subscribe</a>
+        <br><br>
+        &copy; STEM League. All Rights Reserved.
+      </h5>
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

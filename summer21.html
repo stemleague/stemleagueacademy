@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>STEM League Community</title>
+	<link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+<style>
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container, .all {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+img.logo {
+  height: 90px;
+  position: absolute;
+  margin: auto;
+  display: block;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+#all {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.cell {
+  width:25%;
+  padding-bottom: 30px;
+  /* background:#ddd; */
+}
+.mentor {
+  background-color: #a1a4ff;
+}
+.white{
+  background-color: white;
+}
+.brown {
+  background-color: #d4ab84;
+}
+.student {
+  background-color: rgb(197, 197, 197);
+}
+.tag {
+  border-radius: 10px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 7px 0 7px;
+  margin: 0 5px 0 5px; 
+}
+input::placeholder {
+  font-size: 20px;
+  color: gray;
+}
+</style>
+
+<body>
+  <div class="se-pre-con"></div>
+  <!-- navigation bar -->
+  <div id="names">
+    <div class="header" style="background-color: black;">
+      <a href="index.html"><img src="logo.png" width="65em" align="left"
+        style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/></a>
+      <h4 style="color: white; text-align: left; padding-bottom: 1em;">
+        <img src="https://www.pngkit.com/png/full/31-316559_white-home-icon-no-background.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href="home.html">HOME</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/icon/search.png" width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "search.html">SEARCH</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/developer.png' width="26em"/>
+        &nbsp;&nbsp;&nbsp;
+        <a class="underline" href= "crack-the-code.html">CRACK THE CODE</a>
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src='img/icon/developer.png' width="26em"/>
+          &nbsp;&nbsp;&nbsp;
+          <div class="dropdown">
+            <a style="color:white" href="data-programming.html">DATA PROGRAMMING</a>
+            <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+              <br>
+              <p onclick=window.location.href='data-programming.html' class="dpc underline">DATA PROGRAMMING</p>
+              <br><br> 
+              <p onclick=window.location.href='web-development.html' class="wdc underline">WEB DEVELOPMENT</p>
+            </div>
+          </div> -->
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src='img/icon/globe.png' width="20em"/>
+        &nbsp;&nbsp;&nbsp;
+        <div class="dropdown">
+          <a>COMMUNITY</a>
+          <div class="dropdown-content" style="border: none; background-color: transparent; margin: 0em; box-shadow: none;">
+            <br>
+            <p onclick=window.location.href='community.html' class="underline">Fall 2021</p>
+            <br><br>
+            <p onclick=window.location.href='summer21.html' class="underline">Summer 2021</p>
+            <br><br>
+            <p onclick=window.location.href='https://stemleague.github.io/login/final-showcase.html' class="underline">Summer 2020</p>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <img src='img/icon/vault.png' width="20em"/>
+          &nbsp;&nbsp;&nbsp;
+          <a class="underline" href="https://sites.google.com/view/stem-league-library/front-desk">LIBRARY</a>
+        <button class="login" onclick=window.open("https://www.gofundme.com/f/2022-stem-league-developer-program-fund")>SUPPORT US</button>
+      </h4>
+    </div>
+
+    <center>
+        <h1 style='margin-top: 3em; margin-bottom: 0.5em; font-size: 3em; color: white; text-align: center;'>Summer 2021 Cohort</h1>
+        <div id="countStudents"></div>
+        <input style="margin-bottom: 0.8em" class="search" id="mySmallInput" onkeyup="myFunction('')" placeholder="Search by Name...">
+        <br>
+        <span style="padding:0.3em 0.5em 0.3em 0.5em;" class="student tag" onClick="filter('developers');">Developers</span>
+        <span style="padding:0.3em 0.5em 0.3em 0.5em;" class="mentor tag" onClick="filter('staff');">Program Staff</span>
+        <span style="padding:0.3em 0.5em 0.3em 0.5em;" class="brown tag" onClick="filter('bb');">Speakers</span>
+        <span style="padding:0.3em 0.5em 0.3em 0.5em;" class="white tag" onclick=window.location.href='https://docs.google.com/presentation/d/13iZgGQaEMUp0xsXIubDEgGPzUJuPbru2_htdbnc7ZSg/present?slide=id.p' >Hackathon Winners</span>
+    </center>
+    <div id="all"></div>
+    
+    <footer>
+      <img src="logo.png" style="align-items: center; width: 3em;"/><br>
+      <h5 style="color: white">
+        <a href="about.html" style="color:white">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://stemleague.cs.washington.edu/contact.html" style="color:white">Partnership</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="user-agreement.html" style="color:white">User Agreement</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a style="color: white" href="join.html">Join Us</a>
+        <br><br>
+        &copy; STEM League. All Rights Reserved.
+      </h5>
+    </footer>
+    
+    <script>
+      var pm = ["sophia lin", "elizabeth lin", "christin lin"];
+      var mentors = ["jasmine woon", "jessica truong", "quinn liu", "nikita pola", "kent zeng", "aaron zhao", "ahona salsabil", "alyssa vo", "dena sabha", "sally zhou", 
+      "angela kihiko", "ashni shah", "isabel abonitalla", "jyoti llama", "nikita pola", "roberto diaz", "rinav kashuri", "shivank mishra", "simrah shaik", "sonal aggarwal"];
+      var leads = ["aileen niu", "aakansh jaypuriar", "joshua xie", "rohini arangam", "sai praneth raju", "vishwa kumar", "zoya hasan"];
+      var bb = ["speakers from tmobile", "angela kihiko from disney", "professor emeritus richard ladner from paul g allen school", "quinn liu from lyft and elizabeth lin from microsoft", "yuan from microsoft research"];
+
+      var all = new Map([
+        ["elizabeth lin", ["https://elizabethlin6.github.io/website", "Bellevue, WA", "Big congrats all of our awesome Summer 2021 Developers! A priviledge to be a part of your STEM journey."]],
+        ["sophia lin", ["https://sophialin7.github.io/website/", "Bellevue, WA", "cuz we don't need permission to code"]],
+        ["marlin wong", ["https://warpedplatformer.neocities.org/", "Seattle, WA", "Be the biggest brain of the big brains of the brains"]],
+        ["jasmine woon", ["https://www.linkedin.com/in/jxwoon/", "Seattle, WA", "Learning is continuous, don't feel pressured to be an expert now!"]],
+        ["reagan dunphy", ["https://replit.com/@JessicaBae/Hackathon-2#main.py", "Shoreline, WA", "\"I don't necessarily call it 'crazy', I call it happiness with benefits\" -Daffy Duck"]],
+        ["jessica bae", ["https://replit.com/@JessicaBae/Hackathon-2#main.py", "Seattle, WA", "Very thankful for everybody in this program!"]],
+        ["emma visel", ["https://replit.com/@linh11/Choose-Your-Own-Adventure#main.py", "Richmond, CA", "\"Education is our passport to the future, for tomorrow belongs to the people who prepare for it today.\" -Malcolm X"]],
+        ["derek su", ["https://housetours.chanminkwon2027.repl.co/", "Issaquah, WA", "This year was really fun, I would like to say that try to find someone to talk too and help with on STEM because it really helped me to have a buddy to rely on this year."]],
+        ["kate andres", ["https://housetours.chanminkwon2027.repl.co/", "Bellevue, WA", "I've enjoyed this program."]],
+        ["grayson wu", ["https://housetours.chanminkwon2027.repl.co/", "Bellevue, WA", "STEM has been so fun for me! I loved last year's Developer Program, and I love this year's too! Thank you, Elizabeth, Christin, and Sophia, for all the effort you put in this program!"]],
+        ["sophie ha", ["https://pet-project.annaguo2.repl.co/", "Bellevue, WA", "<p style='text-align: left'>if(not_working == true):<br>&nbsp;&nbsp;&nbsp;&nbsp;try_again()<br>else:&nbsp;&nbsp;&nbsp;&nbsp;<br>print(\"Success!\")</span>"]],
+        ["quinn liu", ["https://www.linkedin.com/in/quinn-liu/", "Seattle, WA", "It was amazing to work with such bright and kind young people! Can’t wait to see how far you go!"]],
+        ["jessica truong", ["https://www.linkedin.com/in/truongjessica-tx", "Seattle, WA", "It's been so awesome seeing all of the Developers learn so much this summer! I know that everyone in this program has the potential to go off and do great things so shoot for the stars!"]],
+        ["angela kihiko from disney", ["https://stemleagueplus.com/brown-bag/imagineering.html", "Imagineering: A Fireside Chat", "<i style='font-size:14px;'>I loved hearing about what is like being in STEM from someone who is purusing a career in STEM. It was amazing hearing the story of her journey to college and it inspired me.<br>It was very fun and interesting hearing from an Imagineer and how she implements different forms of technology in her Disney rides.</i>"]],
+        ["professor emeritus richard ladner from paul g allen school", ["https://stemleagueplus.com/brown-bag/computing-accessibility.html", "Computing and Accessibility Talk", "<i style='font-size:14px;'>This talk really inspired me as a student who is learning coding. My favorite part was hearing about Professor Ladner's research and accomplishments and how Computing for Accessibility is so important in the world. I really liked the part of the meeting when we guessed who some people with disabilies were, it taught me many new things about assistive technology. It was interesting to learn about how technology helped people with disabilities and his experience working with those kinds of people.</i>"]],
+        ["nikita pola", ["https://www.linkedin.com/in/nikitapola/", "Brooklyn, NY", "If computers can run infinitely, so can you #ReachforTheStars"]],
+        ["tushar thonupunoori", ["https://replit.com/join/aiponzgrly-tusharthonupuno", "Bellevue, WA", "STEM League Developer Program is a nice program to learn Python and to experience coding in a fun way."]],
+        ["maxwell ku", ["https://replit.com/join/tfbnbbmkqq-fredthefearsome", "Santa Ana, CA", "I had lots of fun learning Python in this camp."]],
+        ["aakansh jaypuriar", ["#", "Downingtown, PA", "I wish everyone a great rest of their year and I am very thankful that I was able to be a part of STEM League for yet another year."]],
+        ["kent zeng", ["https://www.linkedin.com/in/zengkent/", "Newcastle, WA", "It was really fun learning computer science with you all this summer! Excited to see what you will do with code!"]],
+        ["ava furtado", ["https://friends.avaf123.repl.co/", "Bellevue, WA", "I had so much fun participating in STEM League again this year!"]],
+        ["joshua jim", ["#", "Chandler, AZ", "\"The way I see it, if you want the rainbow, you gotta put up with the rain.\" - Dolly Parton"]],
+        ["naol ejigu", ["https://replit.com/@JessicaBae/Hackathon-2#main.py", "Shoreline, WA", "Never give up because you never know if you will accomplish something ahead."]],
+        ["robel berhane", ["https://replit.com/join/nxjkvfqker-robelicus", "Renton, WA", "The good life is not one filled with regrets and \"what-ifs\", it's one that is lived to the fullest. You've only got one, so go out there and take it to the max, ya dig?"]],
+        ["isabel abonitalla", ["http://isabiiil.tech/", "New York, NY", "Don't forget to take care of yourself!"]],
+        ["chanmin kwon", ["https://housetours.chanminkwon2027.repl.co/", "Closter, NJ", "I AM...Kinda starving but...<br>I AM...still coding my project but...<br>I AM...CHANMIN KWON (CK's fine too!)"]],
+        ["suhani shah", ["https://hackathon.vshah1029.repl.co/", "New Hyde Park, NY", "\"It is through science that we prove, but through intuition we discover.\""]],
+        ["zeina khalifa", ["https://replit.com/@ZeinaK/Rock-Paper-Scissors#main.py", "Vancouver, BC", "First rule in programming: If it works, don't touch it."]],
+        ["carol gong", ["https://todo.carolgxy16.repl.co/", "Bellevue, WA", "I wish everyone the best in their programming experiences! Keep on coding and having fun! :D"]],
+        ["anya rajyaguru", ["https://hackathon-project.anyarajyaguru.repl.co/index.html", "Kenmore, WA", "\"If you want the rainbow, you have to put up with the rain. - Dolly Parton\""]],
+        ["patricia wu", ["https://baymax-2.patriciawu.repl.co/", "Fremont, CA", "The fish will always be a fish. A life, a life. Until one thinks otherwise."]],
+        ["aditi rai", ["https://replit.com/@nandinithechamp/Hackathon-Project?from=notifications#main.py", "Cary, NC", "<p style='text-align: left'>if swag >= 100:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('You must be a member of STEM League!')</p>"]],
+        ["reshma winter", ["https://housetours.chanminkwon2027.repl.co/", "Bellevue, WA", "Hola :) This was an awesome program and I learned a lot!"]],
+        ["jonathan santillan-sanchez", ["https://housetours.chanminkwon2027.repl.co/", "Seattle, WA", "This year was fun, And a little life advice (if ya want it), keep moving forward no matter what. Don't forget life will throw obstacles toward ya, so keep getting up again everyday, and chase your dream's and fulfill those dreams, and don't forget to pursue some hobbie's, have a great summer! cya - Jonathan"]],
+        ["anna guo", ["https://pet-project.annaguo2.repl.co/", "Langley, WA", "One memorable thing I have learned at STEM League is to persist no matter what."]],
+        ["travis su", ["#", "Issaquah, WA", "Very fun and very important to know. Coding is heading to the future of our world and I am glad that I am learning now, rather than later."]],
+        ["joshua xie", ["https://www.linkedin.com/in/joshua-xie-17690620b/", "Bellevue, WA", "Currently in need of a <&nbsp;b&nbsp;r&nbsp;>"]],
+        ["daniel tekle", ["https://replit.com/@Danieltekle7/Hackathon-Project-Tic-Tac-Toe-1v1#main.py", "Mountlake Terrace, WA", "\"Some people want it to happen, some wish it would happen, others make it happen.\" - Michael Jordan"]],
+        ["patrick rungruengwatanachai", ["https://replit.com/@JessicaBae/Hackathon-2#main.py", "Seattle, WA", "All warfare is based on deception.<br>-Sun Tzu in The Art Of War"]],
+        ["william liu", ["https://hackathon-project.anyarajyaguru.repl.co/index.html", "Seattle, WA", "Type until your hands R sore!!!"]],
+        ["trisha gupta", ["https://replit.com/join/qlxxcdkkbe-aaliyajamadar97", "West Windsor, NJ", "... I tried"]],
+        ["jaden yang", ["https://replit.com/@nandinithechamp/Hackathon-Project?from=notifications#main.py", "Sunnyvale, CA", "you only live once but if you live it right once is enough -mae west :)"]],
+        ["aaliya jamadar", ["https://replit.com/join/qlxxcdkkbe-aaliyajamadar97", "Princeton Meadows, NJ", "\"The beautiful thing about learning is that nobody can take it away from you.\" - B.B. King"]],
+        ["rishi chandra", ["https://project.rishichandra.repl.co/", "Jacksonville, FL", "How can you lead an empire of mad lads if you yourself are not a mad lad."]],
+        ["cyrus hua", ["https://murderonmymind-alpha.aiedail.repl.co/", "Bellevue, WA", "I had fun learning with everyone! Thanks to all the mentors and admins who made this possible for us!"]],
+        ["natalie branstetter", ["https://replit.com/@linh11/Choose-Your-Own-Adventure#main.py", "State College, PA", "print('DEVELOPERS ROCK')"]],
+        ["flora li", ["https://pet-project.annaguo2.repl.co/", "Nashville, TN", "Hi?!"]],
+        ["pollux chen", ["https://replit.com/join/ydvbkosxxn-polluxchen", "Redmond, WA", "This is fine."]],
+        ["vidhi shah", ["https://hackathon.vshah1029.repl.co/", "New Hyde Park, NY", "Learning the basics are the building blocks to success."]],
+        ["arya moorthy", ["https://hackathon-project.aryamoorthy.repl.co/index.html", "Cary, NC", "I had a lot of fun in this program! I've learned so much and I'm thankful to all the mentors who helped me out!!"]],
+        ["zoya hasan", ["http://linkedin.com/in/zoya-hasan-20787b1b4", "Chicago, IL", "Extra effort is the key to success."]],
+        ["alyssa vo", ["https://www.linkedin.com/in/alyssa-vo/", "Bellevue, WA", "Don't be afraid to ask questions and never forget your semicolons!"]],
+        ["rohini arangam", ["https://www.linkedin.com/in/rohini-arangam", "Mukilteo, WA", "Never be afraid to ask questions."]],
+        ["chelsea zhao", ["https://replit.com/join/qcugxhvoio-chelseazhao1", "San Jose, CA", "Why are while loops so confusing?"]],
+        ["carolyn ku", ["https://replit.com/join/wnshfzszgx-carolynku", "Santa Ana, CA", "\"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.\""]],
+        ["joseph bernier", ["https://final-project.josephbern.repl.co/", "Seattle, WA", "STEM League has taught me how to be a better problem solver."]],
+        ["manu krishnan", ["#", "Clyde Hill, WA", "Yay!"]],
+        ["nandini arya", ["https://replit.com/@nandinithechamp/Hackathon-Project?from=notifications#main.py", "Exton, PA", "I like STEM League."]],
+        ["samuel kong", ["https://housetours.chanminkwon2027.repl.co/", "Bellevue, WA", "Always gonna shock you up."]],
+        ["vilohith gokarakonda", ["https://hackathon-project.anyarajyaguru.repl.co/index.html", "Cumming, GA", "I learned lots from this program and can't wait to do it next year!"]],
+        ["sai praneth raju", ["#", "Bothell, WA", "Kudos to all developers, mentors, and developer leads for making STEM league 2021 a huge success. It was a privilege to be part of your Journey. Life Advice: Never give up. Programming is less about coding and more about your thinking and problem-solving ability. So, don't get disappointed when you can't solve a problem, be patient, and everything should fall in place."]],
+        ["aidan yiu", ["#", "Bellevue, WA", "\"With great power comes great responsibility\"<br>-Spider Man"]],
+        ["quinn liu from lyft and elizabeth lin from microsoft", ["https://stemleagueplus.com/brown-bag/swe.html", "Day In The Life of A Software Engineer", "<i style='font-size:14px;'>I loved how the speakers showed that being a software engineer is a wonderful career. They had a lot of  happiness and passion in their voice when speak about their goals and dreams and life as a developer; this encouraged me to continue to be a developer even after the program ends. It was really educational and helped me learn about what it was like to be a software engineer. I'm glad for that because I'd always been kind of curious and it helped me decide if this was something I could potentially do in the future. IT WAS AWESOME!!</i>"]],
+        ["yuan from microsoft research", ["https://stemleagueplus.com/brown-bag/dna.html", "DNA Data Storage Talk", "<i style='font-size:14px;'>Thank you so much Yuan for taking your time to speak with us! It was so fun to learn about your work in DNA Data Storage and showing the process of how it work! It's amazing to see the application of coding into CS Research and how data can be stored efficiently in something like DNA. We had a wonderful time learning from your expertise and journey into CS. I love this talk, it was so COOL to learn about how DNA works and the nucleotide pairing can be applied to future data storage!!! Thank you so much!</i>"]],
+        ["speakers from tmobile", ["https://stemleagueplus.com/career-development/magenta-talk.html", "Magenta Career Panel", "<i style='font-size:12px;'>I loved hearing from about the life a developer in a student program for a major company like T-Mobile. I feel like I learned so much about this cool and interesting student program. This panel seems to be so inspiring and informative. I liked how they talked about their background and told us what we should focus on depending on our grade. I learned information about T-mobile Internships which I did not know before. I feel like I gained information about career pathways and also what T-mobile offers. Thank you very much for the experience! I liked that we could see the jobs of many different people, so that I could figure out which one I relate to the most, and what jobs I might try to look in to. I loved the talk! The T-Mobile panelist were great!</i>"]],
+        ["logan kwan", ["#", "Bellevue, WA", "Roses are red,<br>Violets are blue,<br>There will always be an asian<br>smarter than you."]],
+        ["justin pyun", ["https://www.veed.io/download/20c9705b-6cf9-43f3-979b-96cd29c4555e", "New York, NY", "Don't be afraid to Google things!"]],
+        ["ridhi rao gundapuneni", ["https://replit.com/join/mejsphujmx-ridhi12", "Richmond, BC", ""]],
+        ["eva yu", ["https://replit.com/@JessicaBae/Hackathon-2#main.py", "Belmont, MA", "\"Code is like humor. When you have to explain it, it’s bad.\" -Cory House"]],
+        ["tyler luu", ["#", "Burien, WA", "Do something that you're uncomfortable with so you can expand your knowledge and increase your chances with success."]],
+        ["heli shah", ["https://hackathon.vshah1029.repl.co/", "New Hyde Park, NY", "\"Don't worry if it doesn't work right [when coding]. If everything did, you'd be out of a job.\" - Steve Jobs"]],
+        ["manogna chandra", ["https://hackathon-website.manognachandra.repl.co/", "St. Johns, FL", "\"If opportunity doesn't knock, build a door.\""]],
+        ["patrick zhu", ["#", "Sammamish, WA", "\"I can take it. The tougher it gets, the cooler I get.\" - Richard Nixon"]],
+        ["aiden tran", ["https://web.roblox.com/games/7176489159/Place-Number?refPageId=d232b450-ed07-4153-8dc6-4b6d3ad4a1f9", "Seattle, WA", ""]],
+        ["kelly cai", ["https://replit.com/join/iatogxixqt-kellycai1", "Sammamish, WA", "stealing can be fun"]],
+        ["kabir vats", ["https://replit.com/@kabirvats2004/Hackathon-Project#main.py", "", ""]],
+        ["kyle leong", ["https://replit.com/@nandinithechamp/Hackathon-Project?from=notifications#main.py", "", ""]],
+        ["2021 final showcase", ["https://docs.google.com/presentation/d/1JuWiOEvH08g6Edb5oxskU0dUkeLW2otGz4jFhs3shvM/present?slide=id.ge4bc9368e6_0_0", "July 30, 2021", "See 2021 Developer Hackathon Winners and all student projects and feedback from Judges."]],
+        ["isabel abonitalla from roblox", ["https://stemleagueplus.com/brown-bag/roblox.html", "Fireside Chat with Roblox Product Manager", ""]],
+
+      ]);
+
+  function clear() {
+    document.getElementById("all").innerHTML = "";
+  }
+
+  function cap(name) {
+    return name.replace(/\b\w/g, l => l.toUpperCase())
+  }
+  
+  function loadDiv(myMap, keywords) {
+
+    var phrase = "" + all.size + " Hacker Projects"
+    var countEntry = "<h1 style='margin-bottom: 2em; line-height: 0em; font-size: 1.7em; color: white; text-align: center;'>" + phrase + "</h1>";
+    var divEntry = "";
+    var id, quote, role;
+    if (keywords.charAt(0) != "_" || keywords.charAt(0) == "") {
+      clear();
+    }
+    var sortedMap = new Map([...myMap.entries()].sort());
+    Array.from(sortedMap.keys()).map(title => {
+        if (pm.includes(title)) {
+          role = '<span class="mentor tag">Program Manager</span>';
+        } else if (mentors.includes(title)) {
+          role = '<span class="mentor tag">Mentor</span>';
+        } else if (leads.includes(title)) {
+          role = '<span class="mentor tag">Developer Lead</span>';
+        } else if (bb.includes(title)) {
+          role = '<span class="brown tag">Speaker</span>';
+        } else if (title == "2021 final showcase") {
+          role = '';
+        } else {
+          role = '<span class="student tag">Developer</span>';
+        }
+        var link = sortedMap.get(title)[0];
+        var location = sortedMap.get(title)[1];
+        id = title.toLowerCase().split(' ').join('_');
+        var ppl = myMap.get(title)[2];
+        var subtitle;
+        if (title == "speakers from tmobile") {
+          subtitle = "Michelle Balatico & Career Speakers from T-Mobile"
+        } else if (title == "professor emeritus richard ladner from paul g allen school") {
+          subtitle = "Professor Emeritus Richard Ladner From Paul G. Allen School"
+        } else if (title == "quinn liu from lyft and elizabeth lin from microsoft") {
+          subtitle = "Quinn Liu from Lyft & Elizabeth Lin from Microsoft"
+        } else {
+          subtitle = title;
+        }
+        quote = "<div style='background-color: #ececff; color: gray; margin:1em; padding: 0.5em; line-height: 1.5em;'>" + ppl + "</div>";
+        divEntry = '<div class="thumb_image" id="' + id + keywords + '" style="width: 30%; border-radius:1%; background-color: white; margin:1em;"><a href="' + link + '"><img width="90%" height="auto" src="img/ppl/' + title + '.png" style="margin-top: 1.2em; border-radius:0%;"><br><h3 style="padding-left: 1em; padding-bottom: 0em;text-align: left; color: black;"><b>' + cap(subtitle) + '</b>' + role + '<br>'+ location + '</h3>' + quote + '</a></div>';
+        $("#all").append(divEntry);
+    });
+
+
+    document.getElementById("countStudents").innerHTML = countEntry;
+  }
+  
+loadDiv(all, '');
+
+function myFunction(query) {
+  var input, filter, table, tr, td, i, txtValue, entries;
+  input = document.getElementById("mySmallInput");
+  var cnt = 0;
+
+  $('#all').find('div').each(function(){
+    var innerDivId = $(this).attr('id');
+    if (typeof innerDivId !== 'undefined') {
+        var cleanedId = innerDivId.toLowerCase().split('_').join(' ');
+        var userInput = input.value;
+        if (query.length > 1) {
+            userInput = query;
+        }
+        if (userInput == "") {
+        $('.cell').css('display','');
+        } else if (cleanedId.indexOf(userInput) !== -1) {
+            $('#' + innerDivId).css('display','');
+        } else {
+            $('#' + innerDivId).css('display','none');
+        }
+    }});
+}
+
+
+function filter(query) {
+  var input, filter, table, tr, td, i, txtValue, entries;
+  input = document.getElementById("mySmallInput");
+  var cnt = 0;
+  $('#all').find('div').each(function() {
+
+    var innerDivId = $(this).attr('id');
+    if (typeof innerDivId !== 'undefined') {
+        var cleanedId = innerDivId.toLowerCase().split('_').join(' ');
+        var userInput = input.value;
+
+        if (query == "staff") {
+          if (pm.includes(cleanedId) || mentors.includes(cleanedId) || leads.includes(cleanedId)) {
+            $('#' + innerDivId).css('display','');
+          } else {
+            $('#' + innerDivId).css('display','none');
+          }
+        } else if (query == "developers") {
+          if (!bb.includes(cleanedId) && !pm.includes(cleanedId) && !mentors.includes(cleanedId) && !leads.includes(cleanedId)) {
+            $('#' + innerDivId).css('display','');
+          } else {
+            $('#' + innerDivId).css('display','none');
+          }
+        } else if (query == "bb") {
+          if (bb.includes(cleanedId)) {
+            $('#' + innerDivId).css('display','');
+          } else {
+            $('#' + innerDivId).css('display','none');
+          }
+        }
+    }});
+}
+
+$(window).load(function() {
+  $(".se-pre-con").fadeOut("slow");;
+});
+</script>
+
+</body>
+</html>

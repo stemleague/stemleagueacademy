@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Gaming</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/gaming.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+      <!-- lesson logo -->
+      <div class="page-logo">
+        <img class="title-logo" src="../img/icon/gaming.png" height="150em" style="bottom: 15px;"/>
+      </div>
+
+      <!-- lesson description -->
+      <div class="description" style="margin-bottom:5.5em;">
+        <p style="font-size:20px;">
+          Game Development is rooted in computing and crafted through code including Python<br>
+          and HTML/CSS/JS. With your technical skills, you can now build exciting games through<br>
+          our variety of game development workshops.
+        </p>
+      </div>
+
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-30em;">
+        <h2 onclick = "changeColors(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Web Development</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColors(2)" id="details" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Data Programming</h2>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 onclick = "changeColors(3)" id="all" class="lessons-title" style="text-decoration: bold; display: inline; color: #d2d2d2;">Details</h2>
+        <hr>
+
+        <div id="lessons-info">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../gaming/pop-up-penguins.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/pop up penguins.png"/>
+                </a>
+                <span class="small-description"><b>1. Pop Up Penguins (9m)</b><br>
+                  Dive into creating your first web development game with HTML and CSS!
+                </span>
+              </li>
+              <li>
+                <a href="../gaming/cookie-party.html">
+                  <img class="thumb-icon" src="../img/thumbnail/cookie party.png"/>
+                </a>
+                <span class="small-description"><b>2. Cookie Party (72m)</b><br>
+                  Test your web development knowledge by building this Cookie Part game web application!
+                </span>
+              </li>
+              <li>
+                <a href="../gaming/ttt.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/ttt1.png"/>
+                </a>
+                <span class="small-description"><b>3. Tic Tac Toe (71m)</b><br>
+                    Leverage the power of Javascript to create a Tic Tac Toe Game.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div id="details-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a href="../gaming/deathly-hallows.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/deathly hallows.png"/>
+                </a>
+                <span class="small-description"><b>1. Deathly Hallows: Stone, Cloak, Wand (17m)</b><br>
+                  A magical twist on the Muggle game Rock, Paper, Scissors as we code a magnificent game with Harry Potter's Deathly Hallows.
+                </span>
+              </li>
+              <li>
+                <a href="../gaming/rpg.html">
+                  <img class = "thumb-icon" src="../img/thumbnail/rpg1.png"/>
+                </a>
+                <span class="small-description"><b>2. Making a Role-Playing Game (34m)</b><br>
+                  Make your own role playing game where you create a character and fight through a text-based dungeon crawler.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="all-info" style="display: none;">
+          <div id="xl-scroll" class="thumb-icon">
+            <table>
+              <tr>
+                <td width="50%" style="padding-right: 1em;">
+                  <p style="font-size:25px;"><b>Gaming</b></p>
+                  <p style="font-size:20px;">
+                    Ever wanted to build your own game? Now you can with 
+                    Python and Javascript! Explore the process of game development
+                    and learn through hands-on workshops that bring creativity 
+                    and interactivity into modern game design.
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Duration:</b>
+                    <br>
+                    203m<br><br>
+                    <b>Release Date:</b>
+                    <br>
+                    2020<br><br>
+                    <b>Genre:</b>
+                    <br>
+                    Gaming<br>
+                  </p>
+                </td>
+                <td width="25%">
+                  <p style="font-size:15px; line-height: 1.25em;">
+                    <b>Curriculum Developers:</b>
+                    <br>
+                    Sarah Ahmed<br>
+                    Elisa Truong<br>
+                    Christin Lin<br>
+                    Karen Zhang
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>
