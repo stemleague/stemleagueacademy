@@ -93,7 +93,7 @@ html, body {
       <img src="logo.png" width="65em" align="left" style="margin-top: 0.5em; margin-right: 3em; margin-left:3em;"/>
       </a>
       <!-- <h4 style="color: white; text-align: left; padding-bottom: 1em;">
-        <button class="login" onclick=window.open("home.html")>EXPLORE STEM LEAGUE+</button>
+        <button class="login" onclick=window.open("home.html")>LOG IN</button>
       </h4> -->
     </div>
 
@@ -359,15 +359,15 @@ html, body {
   
       <div style="color: white; text-align:left;margin-left:10em; margin-right:10em; padding-top:8em;">
         <h1 style="font-size: 3em; text-align: center;">Frequently Asked Questions</h1>
-        <h3 onclick='$("#q-1").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q-1");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           What is STEM League Academy?
         </h3>
         <div id="q-1" style="font-size: 1.3em; color: white; padding:1em; display:none;">
           STEM League Academy (previously STEM League Developer and Explorer Program) is a virtual learning community that offers 
-          year-round coding classes targeted for beginners and intermediate students.
+          year-round coding classes targeted for beginner and intermediate students.
         </div>
 
-        <h3 onclick='$("#q0").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q0");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           How much does it cost to attend STEM League Academy?
         </h3>
         <div id="q0" style="font-size: 1.3em; color: white; padding:1em; display:none;">
@@ -375,28 +375,28 @@ html, body {
           Please see our program application for the cost of each program.
         </div>
 
-        <h3 onclick='$("#q1").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q1");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           Can students outside of US or Canada apply?
         </h3>
         <div id="q1" style="font-size: 1.3em; color: white; padding:1em; display:none;">
-          No, due to time zones differences we cannot accomodate students outside of US or Canada.
+          No, due to time zone differences we cannot accomodate students outside of US or Canada.
         </div>
 
-        <h3 onclick='$("#q2").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q2");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           Is this a virtual program?
         </h3>
         <div id="q2" style="font-size: 1.3em; color: white; padding:1em; display:none;">
           Yes, STEM League Academy Programs are held virtually.
         </div>
 
-        <h3 onclick='$("#q3").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q3");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           What is the age requirement to apply?
         </h3>
         <div id="q3" style="font-size: 1.3em; color: white; padding:1em; display:none;">
           Students must be in grades 6-12th grade to apply (rising 6th graders are eligible).
         </div>
 
-        <h3 onclick='$("#q4").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q4");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           What will I get out of this program? Why should I learn to code?
         </h3>
         <div id="q4" style="font-size: 1.3em; color: white; padding:1em; display:none;">
@@ -404,7 +404,7 @@ html, body {
           from Mentors and Instructors. We want you to take what you learn and leverage yourself in your future STEM career.
         </div>
 
-        <h3 onclick='$("#q6").css("display", "block");' style="font-size: 1.5em; padding:1em; background-color: #081427">
+        <h3 onclick='toggle("q6");' style="font-size: 1.5em; padding:1em; background-color: #081427">
           More Questions?
         </h3>
         <div id="q6" style="font-size: 1.3em; color: white; padding:1em; display:none;">
@@ -470,6 +470,14 @@ html, body {
   $(".se-pre-con").fadeOut("slow");;
   });
 
+  function toggle(s) {
+    var x = document.getElementById(s);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 </script>
 </body>
 </html>

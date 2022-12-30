@@ -5,12 +5,12 @@ $(window).on("scroll", function() {
        $(".header").removeClass("active");
     }
 });
+
 //paste this code under the head tag or in a separate js file.
 // Wait for window load
 $(window).load(function() {
   // Animate loader off screen
-  $("#CohortB").css("display", "none");
-  $("#CohortC").css("display", "none");
+  $(".se-pre-con").fadeOut("slow");;
 });
 
 var off = '#d2d2d2';
