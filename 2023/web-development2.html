@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development 2</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/wd2.png");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+
+      <div style="padding-top: 5em;"></div>
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-15em;;">
+        <table width="100%">
+          <tr>
+            <td width="70%" style="padding-right: 1em;">
+              <p style="font-size:60px;"><b>Web Development 2</b></p>
+              <p style="font-size:20px;">
+                The Web Development 2 Track will
+                provide a practical approach in learning<br>
+                advanced Javascript Functions and Client-Side Web Development.
+              </p>
+            </td>
+            <td width="30%">
+              <p style="font-size:15px; line-height: 1.25em;">
+                <b>Instructor:</b>
+                <br>Elizabeth Lin<br>
+                <br>
+                <br>
+                <b>Curriculum Developers:</b>
+                <br>
+                Elizabeth Lin<br>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Week 1</h2>
+        <hr>
+        <div id="lessons-info" style="padding-bottom: 5em;">
+          <div id="p-xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1MpyZ2XK6ErD0nopYn2nDy9anwZpFjpXYzpT8l5It0s8/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/javascript review.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 1: Javascript Review</b>
+                  <br>Monday, July 10<br>
+                  <p class="ep-description">Quickly get up to speed with Javascript syntax and capabilities.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1OuuZbXls_4JjpMJDvYlHkqlppEaYsBZkMhq1g1vbNC8/present?slide=id.g25d66b9afe4_1_0')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1yP4_93F1PvfAjLoImpXqAg2ted35nFY_kZ2oAo5Cnl8/present?slide=id.p">
+                  <img class="thumb-icon" src="../img/thumbnail/baymax.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Baymax Personal Assistant</b><br>
+                  Tuesday, July 11<br>
+                  <p class="ep-description">Create your own bot with Javascript prompts!</p>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1gdK0cLM7JahVhqunFqQcg3QFWp4ZGYHi2MUTJnZ8e_o/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/events.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 2: Events</b><br>
+                  Wednesday, July 12<br>
+                  <p class="ep-description">Lets dive into events and how to create interactive elements for our websites!</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1XjLPHQ5hf6Syo815hPD-uI2fLO2wtBYRBmz8IeW9vbM/present?slide=id.g8c576334a5_0_1')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1STeQcz50cHfbZkyJr7irj8MqiZWGuQrdbg_VWw35I7s/edit?usp=sharing')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/19lUXbUpasmwcgbc79OD9ksVlpWDGX01mA89H2mloldk/present?slide=id.p">
+                  <img class="thumb-icon" src="../img/thumbnail/minion machine.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Minion Machine</b><br>
+                  Thursday, July 13<br>
+                  <p class="ep-description">Use the power of buttons and events in JS to create a fun interactive game.</p>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1xiaTARh1198STHtCdSG0jHjf6lZqhw8c5mUSHVIwXa8/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/loops and arrays.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 3: Loops & Arrays</b><br>
+                  Friday, July 14<br>
+                  <p class="ep-description">Learn the complexity of loops and arrays to parse information within your web pages.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1NCfCeRKJz67EtRMK35xiDQJWv2BFDdzsY3zqkISDQwg/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1iaqWIfSjC2aTQNjYvir_4qyzB9Q8RyX4MtTM6R2bN7w/edit?usp=sharing')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Week 2</h2>
+          <hr>
+          <div id="p-xl-scroll2" class="thumb-icon">
+            <ul>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1IPbKadulTlygdPM2GksYEQDSHtsFmqywnyiR2ZucgEc/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/buttons and animations.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 4: Buttons & Animations</b><br>
+                  Monday, July 17<br>
+                  <p class="ep-description">What if you could animate your projects? That's a possibility with CSS!</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/17lBEm2GtLTmlId7ePK3Bv14J1XD-Y-8AkgGVrLmcHJg/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1b6o5cwlJ54MHBAnhPLy9m1fkTyYRLkT_0ib4ZselKjk/edit#heading=h.x0psy8aat3g2')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1J3g0oOVSwvVT5919hOWEbdpvzWIREfuE1YUAlL4QjD0/present?slide=id.g257282e5a1e_2_0">
+                  <img class="thumb-icon" src="../img/thumbnail/card collection.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Card Collection</b><br>
+                  Tuesday, July 18<br>
+                  <p class="ep-description">Create your own cards with the magic of CSS selectors!</p>
+                </span>
+              </li>
+              
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1QW8R_jgm1gW7ea6nV5X-7nQfgQT8LNY8LgZhi8AfMxI/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/intro to javascript.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 5: Intro to Javascript</b><br>
+                  Wednesday, July 19<br>
+                  <p class="ep-description">HTML and CSS finished! Now let's decide what behavior we want our sites to have.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1_CfkLFzVn_Kw8uG0EiIr9C3N1l8ldfC76H6NoWzrNDg/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1UR-_p6HgCovu1OkBWWP2Snvjgaag2F_c7Wbh_pLQvcA/edit#heading=h.ghe9vnawakj4')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1_plZb8mNzawdhbcEwzofh-_borMHUXVc7KT-j0-cw14/present?slide=id.g2574fc5ec91_1_0">
+                  <img class="thumb-icon" src="../img/thumbnail/animation magic.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Animation Magic</b><br>
+                  Thursday, July 20<br>
+                  <p class="ep-description">Master your understanding of Javascript with some web animations.</p>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1wzjPRrlKDv2dQxxrAsWNdLkyCwSTCdjssXZEAil8MoI/present?slide=id.ge4bc9368e6_0_0">
+                  <img class="thumb-icon" src="../img/thumbnail/javascript functions.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 6: Javascript Functions</b><br>
+                  Friday, July 21<br>
+                  <p class="ep-description">Divide and conquer using functions to craft the site functionality and surprises.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1yifSI25IbHXoki55HZ6v21hTR19aBoNF/present?slide=id.p1')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1-6oDAw7Vg7s2h0JhzllqftQ--Xt5jKrphj1ZcpRVyj8/edit#heading=h.2bprswrnrybw')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>

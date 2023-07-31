@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Data Programming 2</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+</head>
+<style>
+html {
+  min-height: 100%;
+  background:
+      linear-gradient(to bottom left, transparent, black),
+      url("../img/bg/dp2.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<body>
+  <div class="se-pre-con"></div>
+  <div id="vid-info">
+      <!-- header -->
+      <div id="names" class="header"><a href="../home.html"><img src="../logo.png" class="program-logo" align="left"/></a></div>
+
+
+      <div style="padding-top: 5em;"></div>
+      <!-- video gallery descriptions -->
+      <div class="description" style="margin-bottom:-15em;;">
+        <table width="100%">
+          <tr>
+            <td width="70%" style="padding-right: 1em;">
+              <p style="font-size:60px;"><b>Data Programming 2</b></p>
+              <p style="font-size:20px;">
+                Challenge yourself through our Data
+                Programming 2 Track where students will be<br>
+                equipped with advanced Python analysis skills and data structures.
+              </p>
+            </td>
+            <td width="30%">
+              <p style="font-size:15px; line-height: 1.25em;">
+                <b>Instructor:</b>
+                <br>Elizabeth Lin<br>
+                <br>
+                <br>
+                <b>Curriculum Developers:</b>
+                <br>
+                Elizabeth Lin<br>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Week 1</h2>
+        <hr>
+        <div id="lessons-info" style="padding-bottom: 5em;">
+          <div id="p-xl-scroll" class="thumb-icon">
+            <ul>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1lZr79SO61SlulOlC2c1cfwc7MyrqTlqfTkSMy9z5nug/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/python review.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 1: Python Review</b><br>
+                  Monday, July 31<br>
+                  <p class="ep-description">Let's jump into review of Python concepts and different types of loops.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1kNX0sAoVLl_ZEaLpv1UO1w5dlWy9eydLKWrmPkGiExk/present?slide=id.g237fdef10d3_0_89')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/196yHX9E_29u_VX_2VFyedqT4oJqA00CHfguV9ozSgPE/present?slide=id.p">
+                  <img class = "thumb-icon" src="../img/thumbnail/dna analysis.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: DNA Analysis</b><br>
+                  Tuesday, August 1<br>
+                  <p class="ep-description">Decode DNA strands and practice real-world application of coding to help solve complex scientific problems.</p>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1rbnYwqVPOfiaoy54pD6oLYPsHdDSF8_fUOOgUfr22x8/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/dictionaries.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 2: Dictionaries</b><br>
+                  Wednesday, August 2<br>
+                  <p class="ep-description">Learn a new data structure in Python to create efficient mappings.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1xaGKQSfcT9PzHddinbMv6bQloKKJVCGA55cl11N-9J0/present?slide=id.g25d68e562fc_0_0')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1R1L-nS9fhwcOQeoTEjYtFodsjxtG4yBiBw2ygfQ0BpA/edit#heading=h.dhftta375n6e')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1_K1O3iSaAjNmtgLtOMzxxgRxTW5czniYai0sd0rlU7E/present?slide=id.p">
+                  <img class = "thumb-icon" src="../img/thumbnail/guessing game.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Guessing Game</b><br>
+                  Thursday, August 3<br>
+                  <p class="ep-description">Test your mastery of loops with this challenging exercise.</p>
+                </span>
+              </li>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1uzpzbe7YuTYU4TXCN3KI-H3fsjgBrye-RlNkLCIL1Bo/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/functions.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 3: Functions</b><br>
+                  Friday, August 4<br>
+                  <p class="ep-description">How do we organize our Python code? Apply functions to improve code quality.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1u27L1w0I6YQAKWznxhoWnqRDh37u_uaGA_qMHDQoHgQ/present?slide=id.g237fd4bdcfc_0_0')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1b2KLKNcRZdTXw44FDVATv4ESbhb72UMvySDb0Cx1MZA/edit#heading=h.yr50vydxtg22')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <h2 onclick = "changeColor(1)" id="lessons" class="lessons-title" style="text-decoration: bold; display: inline;">Week 2</h2>
+          <hr>
+          <div id="p-xl-scroll2" class="thumb-icon">
+            <ul>
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1Cstuy9E94-XlI_X8cHZN4832A0Lpn7S7R-H3Izq_Syc/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/sets and slicing.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 4: Sets & Slicing</b><br>
+                  Monday, July 17<br>
+                  <p class="ep-description">Sets are another data structure that enables us to bring flexibility in data analysis.</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1magajkFkv1smP9yzoU8llLFEvwbwxlME9zXs-WLrWEw/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1nS-eMYExxAUZ_-egHB8_bkledao4icbqz1ifjXtKEjg/edit#heading=h.e6eqlaog5lq4')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+
+              <li> 
+                <a target="_blank" href="https://docs.google.com/presentation/d/1GHiYXav_iZtxxxv5qS66PCGk3QcqpyAkHot1kzBKaN0/present?slide=id.g2574de7bfd2_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/sorting hat.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: Sorting Hat</b><br>
+                  Tuesday, July 18<br>
+                  <p class="ep-description">Code up your own quiz to place you in your Hogwarts House!</p>
+                </span>
+              </li>
+              
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/18oILRX5kUMPLXLhrBi3McmV4ozZy2cmzjTjjTC04jv8/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/for loops.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 5: For Loops</b><br>
+                  Wednesday, July 19<br>
+                  <p class="ep-description">Time to automate our code with the power of loops!</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1alLUXuCr38QVmbRtnZI26rwErTZRCQfelJU7SeJYyJA/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1wNYmxjOSqY8EtCze7h-ipLzZFO5IIQlcrMkFSA4ALrw/edit#heading=h.hsvun1wclea4')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1QCNUuiHnAqdByXoPMqpAB1UIXOuoLFlL-5MXCWVP2os/present?slide=id.g2573a37901a_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/college admissions.png"/>
+                </a>
+                <span class="small-description"><b>Coding Session: College Admissions</b><br>
+                  Thursday, July 20<br>
+                  <p class="ep-description">Practice writing some for loops in order to solve a college admission problem dataset.</p>
+                </span>
+              </li>
+
+              <li>
+                <a target="_blank" href="https://docs.google.com/presentation/d/1Mez-i-3KnValGEajocqe29fMxeOMMJgb5fbKiV6YC-s/present?slide=id.ge4bc9368e6_0_0">
+                  <img class = "thumb-icon" src="../img/thumbnail/while loops.png"/>
+                </a>
+                <span class="small-description"><b>Lesson 6: While Loops</b><br>
+                  Friday, July 21<br>
+                  <p class="ep-description">While loops introduce similar logic to for loops, with a fun (and tricky) twist!</p>
+                  <button onClick="window.open('https://docs.google.com/presentation/d/1d2lVeYPYa5sbZbuQUg_75pBNYmHONTP12HxvD0hjcQs/present?slide=id.p')"
+                  class="ppt" target="_blank">Powerpoint</button>
+                  <button onClick="window.open('https://docs.google.com/document/d/1FhKPjfuKUpPW1mvBOeWob1zFgzCoY7PWjfsrHGe5Tno/edit#heading=h.zcgz6rb3yo0x')"
+                  class="reading" target="_blank">Reading</button>
+                </span>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+    </div>
+    </div>
+    
+<script src="../script.js"></script>
+</body>
+</html>
